@@ -1,752 +1,1005 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="safari" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Monojit Layek Portfolio Website</title>
-    <!-----------local stylesheet link------------->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a101b" />
+    <title>Monojit Layek — Robotics Motion Planning Engineer</title>
+    <meta
+      name="description"
+      content="Monojit Layek, IIT Kanpur Robotics & Automation M.Tech graduate. Explore C++ and ROS 2 motion planning, robot kinematics, optimization research, and hands-on mechatronics."
+    />
+    <link rel="canonical" href="https://mlayek.netlify.app/" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Monojit Layek — Robotics Motion Planning Engineer"
+    />
+    <meta
+      property="og:description"
+      content="From mathematical models to machines that move. Robotics software, motion planning, numerical optimization, and mechatronics."
+    />
+    <meta property="og:url" content="https://mlayek.netlify.app/" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
     <link rel="stylesheet" href="/style.css" />
-    <!-----------fonts------------->
-    <script
-      src="https://kit.fontawesome.com/11cbd096f8.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-----------owl carousel links------------->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
-      integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-----------AOS links------------->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="/script.js" defer></script>
   </head>
-
   <body>
-
-
-    
-    <!-----------Navbar------------->
-    <header>
-      <nav id="navbar" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
-        <div class="logo">
-          <img src="/img/logo.png" alt="" />
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="navigation shell" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Monojit Layek, home"
+          ><span class="brand-mark" aria-hidden="true">m<span>.</span></span
+          ><span>monojit<span class="brand-last"> layek</span></span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          aria-label="Open navigation"
+        >
+          <span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#about">About</a><a href="#projects">Projects</a
+          ><a href="#skills">Skills</a><a href="#experience">Experience</a
+          ><a href="#research">Research</a><a href="#education">Education</a
+          ><a href="#contact">Contact</a>
         </div>
-        <!-----------Hamburger------------->
-        <input type="checkbox" class="checkbox">
-        <div class="hamburger-lines">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
-        </div>
-
-        <ul class="nav-items">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#blogs">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <a
+          class="nav-resume"
+          href="/assets/resume/Monojit-Layek-Resume.pdf"
+          download
+          >Résumé <span aria-hidden="true">↗</span></a
+        >
       </nav>
     </header>
-
-
-
-    <!-----------Home------------->
-    <section id="home">
-      <div class="text-holder">
-        <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800" data-aos-anchor-placement="bottom-bottom">Monojit <span>Layek</span></h1>
-        <h3 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" data-aos-anchor-placement="bottom-bottom"><span>M.Tech Robotics & Automation</span> IIT Kanpur</h3>
-        <div class="button" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400">
-          <button class="btn">
-            <a href="#portfolio">View My Works</a>
-          </button>
-        </div>
-      </div>
-      <div class="background">
-        <img src="img/background.png" alt="" />
-      </div>
-      <div class="social-icons" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500" data-aos-anchor-placement="bottom-bottom">
-        <a href="https://www.linkedin.com/in/mlayek" target="”_blank”"
-          ><i class="fa-brands fa-linkedin-in"></i
-        ></a>
-        <a href="https://github.com/mlayek21" target="”_blank”"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a href="https://www.kaggle.com/mlayek" target="”_blank”"
-          ><i class="fa-brands fa-kaggle"></i
-        ></a>
-        <a href="mailto: mlayek@icloud.com" target="”_blank”"
-          ><i class="fa-solid fa-envelope-open-text"></i
-        ></a>
-      </div>
-      <div class="scroll-text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500" data-aos-anchor-placement="bottom-bottom">
-        <a href="#about">Scroll</a>
-      </div>
-    </section>
-
-    <!-----------About------------->
-    <section id="about">
-      <div class="container">
-        <div class="about-img" data-aos="fade-right" data-aos-duration="1200">
-          <img src="img/background1.png" alt="">
-        </div>
-        <div class="text-wrapper" data-aos="fade-right" data-aos-duration="1000">
-          <h4>Monojit Layek</h4>
-          <h5>
-            Aspiring <span>Machine Learning Engineer</span> &
-            <span>Data Scientist</span>
-          </h5>
-          <p>
-            I'm currently working towards my Master of Technology (M.Tech)
-            degree in Robotics and Automation from IIT Kanpur. My passion is
-            Data Science and Robotics. My interests include artificial
-            intelligence, machine learning, deep learning, computer vision,
-            natural language processing and web devlopment. <br> Apart from that I
-            am also interested in financial managment and entrepreneurship.
+    <main id="main">
+      <section class="hero shell" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span> ROBOTICS MOTION
+            PLANNING ENGINEER
           </p>
-
-          <div class="about-list">
-
-
-            <!---------List Item Start--------->
-            <div class="list-item">
-                <label>Residance</label>
-                <p>Rajbari</p>
-            </div>
-
-            <!---------List Item Start--------->
-            <div class="list-item">
-              <label>E-mail</label>
-              <p>mlayek@icloud.com</p>
-            </div>
-
-            <!---------List Item Start--------->
-            <div class="list-item">
-                <label>Address</label>
-                <p>Asansol, W.B</p>
-            </div>
-
-              <!---------List Item Start--------->
-              <div class="list-item">
-                <label>Phone</label>
-                <p>+91 9593141413</p>
-              </div>
-
-
-            <!---------List Item Start--------->
-            <div class="list-item">
-              <label>Country</label>
-              <p>India</p>
-            </div>
-
-            <!---------List Item Start--------->
-            <div class="list-item">
-                <label>Skype</label>
-                <p>live:mlayek3</p>
-            </div>
-
-            <!---------List Item Start--------->
-            <div class="list-item">
-              <label>Pin Code</label>
-              <p>713358</p>
-              <!---------List Item End--------->
-            </div>
-
-            <!---------List Item Start--------->
-            <div class="list-item">
-                <label>Freelance</label>
-                <p>Available</p>
-                <!---------List Item End--------->
-            </div>
-            <button class="btn"><a href="My_resume/21105049_MonojitLayek_MTech_ME_2.pdf" download="resume">Download CV</a></button>
+          <p class="hero-intro">Hi, I’m Monojit Layek.</p>
+          <h1 id="hero-title">
+            Building intelligent<br /><span>robot motion</span><br />&amp;
+            control systems<span class="period">.</span>
+          </h1>
+          <p class="hero-description">
+            IIT Kanpur M.Tech graduate connecting robot kinematics, numerical
+            optimization, and C++ / ROS 2 software to plan how robots move.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects"
+              >Explore projects <span aria-hidden="true">↗</span></a
+            ><a
+              class="button secondary"
+              href="/assets/resume/Monojit-Layek-Resume.pdf"
+              target="_blank"
+              rel="noopener"
+              >View résumé <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/mlayek21" target="_blank" rel="noopener"
+              >GitHub <span aria-hidden="true">↗</span></a
+            ><a
+              href="https://www.linkedin.com/in/mlayek"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn <span aria-hidden="true">↗</span></a
+            ><a href="#contact">Contact me <span aria-hidden="true">↗</span></a>
           </div>
         </div>
-      </div>
-    </section>
-
-
-    <!-----------Resume------------->
-    <section id="resume">
-      <div class="heading-wrapper">
-          <div class="heading">
-              <h2>Resume</h2>
+        <figure class="hero-visual">
+          <div class="visual-topline">
+            <span
+              ><span class="tiny-cross" aria-hidden="true">+</span> MOTION, BY
+              DESIGN</span
+            ><span>FIG. 01</span>
           </div>
-          <div class="animate-bar"></div>
-          <div class="sub-heading">
-            <p>Below are education, certification & some of my skills, and I'm always looking to learn more.</p>
+          <img
+            class="hero-arm"
+            src="/assets/diagrams/hero-manipulator.svg"
+            width="720"
+            height="600"
+            alt="Conceptual articulated robot arm with a planned end-effector path and coordinate axes"
+            fetchpriority="high"
+          />
+          <div class="visual-bottomline">
+            <span
+              ><span class="status-dot" aria-hidden="true"></span> KINEMATICS →
+              TRAJECTORY → MOTION</span
+            ><span aria-hidden="true">[ x, y, z ]</span>
           </div>
-      </div>
-
-      <div class="container">
-
-        <!-----------Education------------->
-        <div class="education" data-aos="fade-right" data-aos-duration="1200" >
-          <div class="title">
-            <h4>Education</h4>
-          </div>
-
-          <!--Resume start-->
-          <div class="resume-item">
-            <div class="item-arrow"></div>
-            <h5>Master In Technology</h5>
-            <span>Robotics & Automation, Dept. of Mechanical</span>
-            <p>Indian Institute Of Technology Kanpur <br> Kanpur, U.P, India</p>
-          </div>
-          <!--Resume end-->
-
-          <!--Resume start-->
-          <div class="resume-item">
-            <div class="item-arrow"></div>
-            <h5>Bachelor In Technology</h5>
-            <span>Mechanical Engineering</span>
-            <p> Kalyani Govt. Engg. College<br> Kalyani, W.B, India</p>
-          </div>
-          <!--Resume end-->
-
-          <!--Resume start-->
-          <div class="resume-item">
-            <div class="item-arrow"></div>
-            <h5>Senior Secondary</h5>
-            <span>W.B.S.C.T.E</span>
-            <p>Asansol Polytechnic College<br> Asansol, W.B, India</p>
-          </div>
-          <!--Resume end-->
-
-          <!--Resume start-->
-          <div class="resume-item">
-            <div class="item-arrow"></div>
-            <h5>Secondary</h5>
-            <span>W.B.B.S.E</span>
-            <p>Raniganj Boyes High School <br> Raniganj, W.B, India</p>
-          </div>
-          <!--Resume end-->
-        </div>
-
-
-        <!-----------Certification------------->
-        <div class="certification" data-aos="fade-right" data-aos-duration="1200" >
-          <div class="title">
-            <h4>Certified Courses</h4>
-          </div>
-
-          <!--Resume start-->
-          <div class="resume-item">
-            <div class="item-arrow"></div>
-            <h5>Machine Learning Specialization</h5>
-            <span>DeepLearning.AI, Stanford University, Coursera</span>
-            <p>Supervised, Advanced Algo, Unsupervised Learning</p>
-            <button class="btnn"><a href="https://coursera.org/share/841492c55f2802908ebe98906818841b" target=”_blank”>Specialization Certificate</a></button>
-          
-          </div>
-          <!--Resume end-->
-
-          <!--Resume start-->
-          <div class="resume-item">
-            <div class="item-arrow"></div>
-            <h5>Deep Learning Specialization</h5>
-            <span>DeepLearning.AI, Coursera</span>
-            <p>Neural Network, Improving DNN, CNN, RNN, NLP</p>
-            <!-- <button class="btnn"><a href="#">Course 1</a></button>
-            <button class="btnn"><a href="#">Course 2</a></button>
-            <button class="btnn"><a href="#">Course 3</a></button>
-            <button class="btnn"><a href="#">Course 4</a></button>
-
-            <button class="btnn"><a href="#">Course 5</a></button>
-            <button class="btnn"><a href="#">Specialization</a></button> -->
-            <button class="btnn"><a href="#">Ongoing</a></button>
-          
-          </div>
-          <!--Resume end-->
-
-          <!--Resume start-->
-          <div class="resume-item">
-            <div class="item-arrow"></div>
-            <h5>Data-Structure & Algorithm</h5>
-            <span>Udemy</span>
-            <p> Basic DSA using python.</p>
-            <button class="btnn"><a href="#">Certificate</a></button>
-          </div>
-          <!--Resume end-->
-
-          <!--Resume start-->
-          <div class="resume-item">
-            <div class="item-arrow"></div>
-            <h5>MySQL Data Analysis</h5>
-            <span>Udemy</span>
-            <p>Advance MySQL, Data-Analysis & Management.</p>
-            <button class="btnn"><a href="https://ude.my/UC-6ee321ad-f760-4c55-866a-af7819818abb" target=”_blank”>Certificate</a></button>
-          </div>
-          <!--Resume end-->
-        </div> 
-      </div>
-
-      
-      <!-----------Skill------------->
-      <section id="skills">
-        <div class="heading-wrapper">
-            <div class="heading">
-                <h2>My Skills</h2>
-            </div>
-            <div class="animate-bar"></div>
-        </div>
-
-        <div class="container">
-          <!-----------skill1------------->
-          <div class="progress-item">
-            <div class="text">
-              <h5>
-                <i class="fa-brands fa-python"> Python</i>
-              </h5>
-              <p>
-                Numpy, Pandas, MPL, Scipy
-              </p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-line html"></div>
-            </div>
-          </div>
-          <!-----------end------------->
-
-          
-
-          <!-----------skill3------------->
-          <div class="progress-item">
-            <div class="text">
-              <h5>
-                <i class="fa-brands fa-python"> C++, Matlab</i>
-              </h5>
-              
-            </div>
-            <div class="progress-bar">
-              <div class="progress-line html"></div>
-            </div>
-          </div>
-          <!-----------end------------->
-
-          <!-----------skill4------------->
-          <div class="progress-item">
-            <div class="text">
-              <h5>
-                <i class="fa-brands fa-python"> ML & DL Lib</i>
-              </h5>
-              <p>
-                Sklearn, Opencv, Tensorflow
-              </p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-line html"></div>
-            </div>
-          </div>
-          <!-----------end------------->
-
-          <!-----------skill5------------->
-          <div class="progress-item">
-            <div class="text">
-              <h5>
-                <i class="fa-brands fa-python"> Data Analysis</i>
-              </h5>
-              <p>Tablu, MS-Exel</p>
-              
-            </div>
-            <div class="progress-bar">
-              <div class="progress-line html"></div>
-            </div>
-          </div>
-          <!-----------end------------->
-
-          <!-----------skill6------------->
-          <div class="progress-item">
-            <div class="text">
-              <h5>
-                <i class="fa-brands fa-python"> Full Stack Web Dev.</i>
-              </h5>
-              <p>
-                HTML, CSS, JS,  Django
-              </p>
-            </div>
-            <div class="progress-bar">
-              <div class="progress-line html"></div>
-            </div>
-          </div>
-          <!-----------end------------->
-
+          <figcaption>
+            Conceptual illustration · not a project simulation
+          </figcaption>
+        </figure>
+        <div class="hero-foundation">
+          <span>M.TECH <strong>IIT Kanpur</strong></span
+          ><span>CORE STACK <strong>C++ / ROS 2</strong></span
+          ><a href="#about" class="scroll-cue"
+            >ENGINEERING IN MOTION <span aria-hidden="true">↓</span></a
+          >
         </div>
       </section>
-    </section>
-
-
-    <!-----------portfolio------------->
-    <section id="portfolio"> 
-      <div class="heading-wrapper">
-        <div class="heading">
-          <h2>Portfolio</h2>
-        </div>
-        <div class="animate-bar"></div>
-        <div class="sub-heading">
-          <p>Here you can see some of the projects I've done on my own time.</p>
+      <div class="capability-strip">
+        <div class="shell capability-inner">
+          <span><i>01</i> Motion planning</span
+          ><span><i>02</i> Robot kinematics</span
+          ><span><i>03</i> Numerical optimization</span
+          ><span><i>04</i> Mechatronic systems</span>
         </div>
       </div>
-
-      <!-------------gallery------------->
-      <div class="gallery-wrapper">
-        <div class="gallery-nav">
-          <div class="gallery-filter">
-            <span class="filter-item active" data-filter="all">All</span>
-            <span class="filter-item" data-filter="ml">Machine Learning</span>
-            <span class="filter-item" data-filter="dl">Deep Learning</span>
-            <span class="filter-item" data-filter="cv">Computer Vision</span>
-            <span class="filter-item" data-filter="da">Data-Analytics</span>
-          </div>
+      <section
+        class="section shell about"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div>
+          <p class="section-label"><span>01 /</span> ABOUT ME</p>
+          <h2 id="about-title">
+            From mathematical models<br />to machines that <em>move.</em>
+          </h2>
+          <p class="section-aside">Software precision. Mechanical intuition.</p>
         </div>
+        <div class="about-copy">
+          <p>
+            I’m a robotics engineer with an M.Tech in
+            <strong>Robotics &amp; Automation from IIT Kanpur</strong> and a
+            B.Tech in Mechanical Engineering from Kalyani Government Engineering
+            College.
+          </p>
+          <p>
+            My work spans robotic kinematics, collision-aware motion planning,
+            trajectory generation, and constrained nonlinear optimization. I
+            develop with C++, Python, ROS 2, MoveIt 2, Gazebo, and PyBullet.
+          </p>
+          <p>
+            From parallel manipulator modeling to a fabricated electromagnetic
+            actuator, I bring mathematical modeling, software development, CAD
+            design, and hardware prototyping into the same engineering process.
+          </p>
+          <a
+            class="text-link"
+            href="/assets/resume/Monojit-Layek-Resume.pdf"
+            download
+            >Download my résumé <span aria-hidden="true">↓</span></a
+          >
+        </div>
+      </section>
+      <section
+        class="section projects-section"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="section-label"><span>02 /</span> SELECTED WORK</p>
+              <h2 id="projects-title">
+                Engineering in practice<span class="period">.</span>
+              </h2>
+            </div>
+            <p>
+              Four projects. From motion-planning software<br />to physical
+              hardware and mathematical research.
+            </p>
+          </div>
+          <div class="project-toolbar">
+            <div
+              class="project-filters"
+              role="group"
+              aria-label="Filter projects"
+              hidden
+            >
+              <button
+                type="button"
+                class="filter active"
+                data-filter="all"
+                aria-pressed="true"
+              >
+                All projects <span>04</span></button
+              ><button
+                type="button"
+                class="filter"
+                data-filter="motion"
+                aria-pressed="false"
+              >
+                Motion planning</button
+              ><button
+                type="button"
+                class="filter"
+                data-filter="robotics"
+                aria-pressed="false"
+              >
+                Robotics</button
+              ><button
+                type="button"
+                class="filter"
+                data-filter="controls"
+                aria-pressed="false"
+              >
+                Controls</button
+              ><button
+                type="button"
+                class="filter"
+                data-filter="research"
+                aria-pressed="false"
+              >
+                Research
+              </button>
+            </div>
+            <span class="project-count" aria-live="polite" aria-atomic="true"
+              >04 PROJECTS</span
+            >
+          </div>
+          <div class="project-grid">
+            <!-- PROJECTS:start -->
+            <article
+              class="project-card"
+              id="project-dobot"
+              data-category="motion robotics"
+              aria-labelledby="title-dobot"
+            >
+              <figure class="project-figure">
+                <img
+                  src="/assets/diagrams/manipulator.svg"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Conceptual robot manipulator and end-effector path, not a simulation capture"
+                /><span class="project-number" aria-hidden="true"
+                  >PROJECT / 01</span
+                >
+                <figcaption>CONCEPTUAL SCHEMATIC</figcaption>
+              </figure>
+              <div class="project-body">
+                <div class="project-meta">
+                  <span>Robotics software / Motion planning</span
+                  ><time datetime="2022-10">October 2022</time>
+                </div>
+                <h3 id="title-dobot">6-Axis Dobot Manipulator</h3>
+                <p class="project-subtitle">Motion Planning Stack</p>
+                <p class="project-description">
+                  A C++ / ROS 2 motion-planning stack connecting numerical
+                  inverse kinematics, trajectory generation, and collision-aware
+                  pick-and-place planning.
+                </p>
+                <ul class="tags" aria-label="Technologies">
+                  <li>C++</li>
+                  <li>ROS 2 Humble</li>
+                  <li>MoveIt 2</li>
+                  <li>Gazebo</li>
+                  <li>PyBullet</li>
+                </ul>
+                <p class="project-outcome">
+                  From robot description to simulation-validated motion
+                </p>
+                <details class="project-details">
+                  <summary>
+                    Explore case study<span class="sr-only"
+                      >: 6-Axis Dobot Manipulator</span
+                    >
+                  </summary>
+                  <div class="case-study">
+                    <p class="case-organization">Personal project</p>
+                    <h4>Engineering problem</h4>
+                    <p>
+                      Plan and execute collision-aware motion for a six-axis
+                      manipulator, while handling inverse-kinematics sensitivity
+                      near singular configurations and generating controlled
+                      motion between targets.
+                    </p>
+                    <h4>Architecture &amp; approach</h4>
+                    <ol class="pipeline" aria-label="Engineering pipeline">
+                      <li>Robot description</li>
+                      <li>Kinematics / IK</li>
+                      <li>Path planning</li>
+                      <li>Time profiling</li>
+                      <li>Simulation</li>
+                    </ol>
+                    <p>
+                      The robot description provides the link and joint
+                      structure for kinematic modeling. The inverse-kinematics
+                      solver maps end-effector targets into joint
+                      configurations. Collision-aware planning connects
+                      configurations, followed by interpolation and velocity
+                      profiling to produce the motion reference evaluated in
+                      simulation.
+                    </p>
+                    <h4>Technical contributions</h4>
+                    <ul class="contribution-list">
+                      <li>
+                        Developed a full ROS 2 Humble motion-planning stack in
+                        C++ for a six-axis manipulator.
+                      </li>
+                      <li>
+                        Implemented numerical inverse kinematics using Damped
+                        Least Squares, a geometric Jacobian, and a
+                        singularity-robust pseudoinverse.
+                      </li>
+                      <li>
+                        Developed cubic-spline trajectory interpolation with
+                        trapezoidal and quintic-polynomial velocity profiles.
+                      </li>
+                      <li>
+                        Integrated RRT/RRT* and MoveIt 2 for collision-aware
+                        planning within a pick-and-place pipeline.
+                      </li>
+                      <li>
+                        Validated robotic motion in both Gazebo and PyBullet.
+                      </li>
+                    </ul>
+                    <h4>Evaluation &amp; scope</h4>
+                    <p>
+                      Evaluation was performed in Gazebo and PyBullet
+                      simulations. No real-robot deployment, success-rate
+                      metric, or timing guarantee is claimed. Trapezoidal and
+                      quintic profiles are described separately without assuming
+                      all generated motion is jerk-free.
+                    </p>
 
-        
-        <div class="content-wrapper">
+                    <div class="media-placeholder">
+                      <strong>ORIGINAL PROJECT MEDIA / TO BE ADDED</strong>RViz
+                      / Gazebo screenshots, PyBullet pick-and-place captures,
+                      and joint-position / velocity trajectory plots.
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </article>
+            <article
+              class="project-card"
+              id="project-stewart"
+              data-category="robotics controls"
+              aria-labelledby="title-stewart"
+            >
+              <figure class="project-figure">
+                <img
+                  src="/assets/diagrams/stewart.svg"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Conceptual Stewart platform with six connecting struts and motion axes"
+                /><span class="project-number" aria-hidden="true"
+                  >PROJECT / 02</span
+                >
+                <figcaption>CONCEPTUAL SCHEMATIC</figcaption>
+              </figure>
+              <div class="project-body">
+                <div class="project-meta">
+                  <span>Parallel robotics / Stabilization</span
+                  ><time datetime="2023-03">March 2023 – June 2024</time>
+                </div>
+                <h3 id="title-stewart">6-DOF Stewart Platform</h3>
+                <p class="project-subtitle">Ship-Mounted Drone Landing</p>
+                <p class="project-description">
+                  A parallel robotic landing platform designed to compensate for
+                  vessel motion, combining mechanical design, kinematic
+                  modeling, and simulation.
+                </p>
+                <ul class="tags" aria-label="Technologies">
+                  <li>CAD</li>
+                  <li>URDF</li>
+                  <li>ROS</li>
+                  <li>PyBullet</li>
+                  <li>Kinematics</li>
+                </ul>
+                <p class="project-outcome">
+                  Six degrees of freedom. One stabilization problem.
+                </p>
+                <details class="project-details">
+                  <summary>
+                    Explore case study<span class="sr-only"
+                      >: 6-DOF Stewart Platform</span
+                    >
+                  </summary>
+                  <div class="case-study">
+                    <p class="case-organization">
+                      AeThrone Aerospace · Pune, India
+                    </p>
+                    <h4>Engineering problem</h4>
+                    <p>
+                      A ship-mounted drone landing surface must account for
+                      changing vessel orientation. The engineering problem was
+                      to model a six-DOF parallel platform capable of
+                      compensating for pitch, roll, and yaw disturbances.
+                    </p>
+                    <h4>Architecture &amp; approach</h4>
+                    <ol class="pipeline" aria-label="Engineering pipeline">
+                      <li>Mechanical CAD</li>
+                      <li>URDF model</li>
+                      <li>FK / IK</li>
+                      <li>Dynamics</li>
+                      <li>ROS / PyBullet</li>
+                    </ol>
+                    <p>
+                      The parallel mechanism links a fixed base to a moving
+                      platform through six struts. Kinematic modeling relates
+                      the desired platform pose to the strut configurations,
+                      while CAD and URDF descriptions carry the mechanism into
+                      simulation. Dynamic analysis complements the pose model
+                      when examining stabilization behavior.
+                    </p>
+                    <h4>Technical contributions</h4>
+                    <ul class="contribution-list">
+                      <li>
+                        Designed the mechanical architecture of a
+                        six-degree-of-freedom Stewart platform.
+                      </li>
+                      <li>
+                        Created detailed CAD geometry and a URDF description for
+                        robotic modeling and simulation.
+                      </li>
+                      <li>
+                        Developed forward and inverse kinematic models linking
+                        platform pose and leg configuration.
+                      </li>
+                      <li>
+                        Performed dynamic analysis and integrated robotic
+                        software using ROS and PyBullet.
+                      </li>
+                      <li>
+                        Evaluated platform motion and stabilization behavior
+                        against pitch, roll, and yaw disturbances in simulation.
+                      </li>
+                    </ul>
+                    <h4>Evaluation &amp; scope</h4>
+                    <p>
+                      The résumé documents simulation-based evaluation in ROS /
+                      PyBullet. The verified public repository contains CAD,
+                      URDF, inverse-kinematics code, and PyBullet simulation.
+                      Commercial deployment, drone landing trials, and shipboard
+                      testing are not claimed.
+                    </p>
+                    <a
+                      class="text-link"
+                      href="https://github.com/mlayek21/Stewart-Platform"
+                      target="_blank"
+                      rel="noopener"
+                      >View project on GitHub
+                      <span aria-hidden="true">↗</span></a
+                    >
+                    <div class="media-placeholder">
+                      <strong>ORIGINAL PROJECT MEDIA / TO BE ADDED</strong
+                      >Original CAD assembly views, a PyBullet
+                      motion-compensation recording, and platform-pose response
+                      plots.
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </article>
+            <article
+              class="project-card"
+              id="project-actuator"
+              data-category="controls"
+              aria-labelledby="title-actuator"
+            >
+              <figure class="project-figure">
+                <img
+                  src="/assets/diagrams/actuator.svg"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Conceptual magnetic actuator, slider-crank mechanism, and closed-loop feedback path"
+                /><span class="project-number" aria-hidden="true"
+                  >PROJECT / 03</span
+                >
+                <figcaption>CONCEPTUAL SCHEMATIC</figcaption>
+              </figure>
+              <div class="project-body">
+                <div class="project-meta">
+                  <span>Mechatronics / Hardware prototype</span
+                  ><time datetime="2019-07">July 2019</time>
+                </div>
+                <h3 id="title-actuator">Magnetic Reciprocating Actuator</h3>
+                <p class="project-subtitle">
+                  Mechatronic Design &amp; Closed-Loop Control
+                </p>
+                <p class="project-description">
+                  A designed, fabricated, and tested electromagnetic actuator
+                  with Arduino control, position feedback, and a slider-crank
+                  mechanism for rotary output.
+                </p>
+                <ul class="tags" aria-label="Technologies">
+                  <li>CAD</li>
+                  <li>Arduino</li>
+                  <li>Embedded control</li>
+                  <li>Sensors</li>
+                  <li>Dynamics</li>
+                </ul>
+                <p class="project-outcome">
+                  Physical fabrication, electronics, and closed-loop testing
+                </p>
+                <details class="project-details">
+                  <summary>
+                    Explore case study<span class="sr-only"
+                      >: Magnetic Reciprocating Actuator</span
+                    >
+                  </summary>
+                  <div class="case-study">
+                    <p class="case-organization">
+                      Kalyani Government Engineering College
+                    </p>
+                    <h4>Engineering problem</h4>
+                    <p>
+                      Convert electromagnetically driven reciprocating motion
+                      into continuous rotary output, and coordinate actuation
+                      with mechanism position using a closed-loop
+                      microcontroller system.
+                    </p>
+                    <h4>Architecture &amp; approach</h4>
+                    <ol class="pipeline" aria-label="Engineering pipeline">
+                      <li>Analytical model</li>
+                      <li>CAD design</li>
+                      <li>Fabrication</li>
+                      <li>Arduino control</li>
+                      <li>Prototype testing</li>
+                    </ol>
+                    <p>
+                      A photoelectric sensor measures mechanism position.
+                      Arduino control logic uses this feedback to coordinate
+                      solid-state switching of electromagnetic actuation. The
+                      slider-crank mechanism couples the resulting linear
+                      reciprocation to rotary output, connecting the mechanical
+                      dynamics model with the electronic control loop.
+                    </p>
+                    <h4>Technical contributions</h4>
+                    <ul class="contribution-list">
+                      <li>
+                        Modeled a constrained slider-crank mechanism and
+                        analyzed conversion of linear reciprocation into
+                        continuous rotary motion.
+                      </li>
+                      <li>
+                        Performed analytical dynamic torque profiling and
+                        compared mechanical behavior with theoretical models.
+                      </li>
+                      <li>
+                        Designed the complete CAD architecture and fabricated a
+                        working physical hardware prototype.
+                      </li>
+                      <li>
+                        Developed Arduino-based embedded control logic with
+                        photoelectric position feedback.
+                      </li>
+                      <li>
+                        Integrated solid-state switching for phase-locked
+                        electromagnetic actuation.
+                      </li>
+                      <li>
+                        Tested empirical motion stability and torque output
+                        against analytical models.
+                      </li>
+                    </ul>
+                    <h4>Evaluation &amp; scope</h4>
+                    <p>
+                      This was a real hardware project: CAD design, fabrication,
+                      electronics integration, microcontroller programming, and
+                      experimental testing. The résumé reports comparison of
+                      empirical motion stability and torque output against
+                      theory; numerical test results are not supplied.
+                    </p>
 
-          <!-------------gallery 1------------->
-          <div class="gallery-item ml" data-aos="fade-right" data-aos-duration="1200" >
-            <div class="gallery-item-inner">
-              <img src="/img/work1.jpg" alt="ml">
-              <div class="overlay">
-                <h5>Machine Learning #1</h5>
-                <p>More Info</p>
+                    <div class="media-placeholder">
+                      <strong>ORIGINAL PROJECT MEDIA / TO BE ADDED</strong
+                      >Actual prototype photographs, CAD assembly screenshots,
+                      control electronics / wiring, and measured motion or
+                      torque results.
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </article>
+            <article
+              class="project-card"
+              id="project-optimization"
+              data-category="research"
+              aria-labelledby="title-optimization"
+            >
+              <figure class="project-figure">
+                <img
+                  src="/assets/diagrams/optimization.svg"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Conceptual objective contours, a constraint boundary, and feasible search directions; not benchmark data"
+                /><span class="project-number" aria-hidden="true"
+                  >PROJECT / 04</span
+                >
+                <figcaption>CONCEPTUAL SCHEMATIC</figcaption>
+              </figure>
+              <div class="project-body">
+                <div class="project-meta">
+                  <span>Optimization research / Algorithms</span
+                  ><time datetime="2024-06">June 2024</time>
+                </div>
+                <h3 id="title-optimization">Kanpur–Zoutendijk Solver</h3>
+                <p class="project-subtitle">
+                  Constrained Nonlinear Optimization
+                </p>
+                <p class="project-description">
+                  Co-authored feasible-direction optimization research that
+                  reduces the LP subproblem to an active-constraint subspace and
+                  recovers infeasible starting points.
+                </p>
+                <ul class="tags" aria-label="Technologies">
+                  <li>Nonlinear programming</li>
+                  <li>Newton methods</li>
+                  <li>KKT</li>
+                  <li>Numerical optimization</li>
+                </ul>
+                <p class="project-outcome">
+                  Research-reported 2–3.1× runtime improvement on benchmarks
+                </p>
+                <details class="project-details">
+                  <summary>
+                    Explore case study<span class="sr-only"
+                      >: Kanpur–Zoutendijk Solver</span
+                    >
+                  </summary>
+                  <div class="case-study">
+                    <p class="case-organization">
+                      Indian Institute of Technology Kanpur
+                    </p>
+                    <h4>Engineering problem</h4>
+                    <p>
+                      Solve constrained nonlinear optimization problems while
+                      reducing the cost of the feasible-direction subproblem and
+                      accommodating infeasible initial points and equality
+                      constraints.
+                    </p>
+                    <h4>Architecture &amp; approach</h4>
+                    <ol class="pipeline" aria-label="Engineering pipeline">
+                      <li>Active constraints</li>
+                      <li>Reduced LP</li>
+                      <li>Feasible direction</li>
+                      <li>Trust region</li>
+                      <li>KKT evaluation</li>
+                    </ol>
+                    <p>
+                      The method focuses the feasible-direction LP on the
+                      active-constraint subspace rather than the full state
+                      space. Newton steps address infeasible starts, while a
+                      shrinking trust region handles equality constraints.
+                      Benchmark methodology examines computational performance
+                      and KKT residual behavior across the tested non-convex
+                      problems.
+                    </p>
+                    <h4>Technical contributions</h4>
+                    <ul class="contribution-list">
+                      <li>
+                        Co-authored a feasible-direction numerical solver for
+                        constrained nonlinear problems.
+                      </li>
+                      <li>
+                        Reformulated the simplex LP subproblem from the
+                        n-dimensional state space into an m-dimensional
+                        active-constraint subspace, where m ≤ n.
+                      </li>
+                      <li>
+                        Developed a Newton-step recovery routine for infeasible
+                        initial points.
+                      </li>
+                      <li>
+                        Designed a shrinking trust-region strategy for equality
+                        constraints.
+                      </li>
+                      <li>
+                        Evaluated non-convex benchmark problems spanning 2D–13D,
+                        including runtime and KKT convergence characteristics
+                        relative to classical Zoutendijk and evolutionary
+                        baselines.
+                      </li>
+                    </ul>
+                    <h4>Evaluation &amp; scope</h4>
+                    <p>
+                      The résumé reports 2–3.1× CPU runtime improvements on the
+                      evaluated benchmarks. This is a research-reported result,
+                      not a universal performance guarantee. The publication
+                      URL, complete benchmark tables, and citation metadata have
+                      not been independently verified and are not invented here.
+                    </p>
+
+                    <div class="media-placeholder">
+                      <strong>ORIGINAL PROJECT MEDIA / TO BE ADDED</strong
+                      >Verified publication or preprint, algorithm pseudocode,
+                      benchmark tables, and original convergence / runtime
+                      plots.
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </article>
+            <!-- PROJECTS:end -->
+          </div>
+          <p class="media-note">
+            <span aria-hidden="true">ⓘ</span> Project visuals are conceptual
+            schematics. Each case study identifies the original media still to
+            be added.
+          </p>
+        </div>
+      </section>
+      <section class="section shell" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <div>
+            <p class="section-label"><span>03 /</span> TECHNICAL TOOLKIT</p>
+            <h2 id="skills-title">The tools behind the motion.</h2>
+          </div>
+          <p>
+            A foundation in mathematics.<br />A practical approach to
+            implementation.
+          </p>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-panel">
+            <span class="skill-icon" aria-hidden="true">&lt;/&gt;</span>
+            <h3>Programming</h3>
+            <p>Building the computational core.</p>
+            <ul class="tags">
+              <li>C++</li>
+              <li>Python</li>
+              <li>MATLAB</li>
+            </ul>
+          </article>
+          <article class="skill-panel">
+            <span class="skill-icon" aria-hidden="true">⌘</span>
+            <h3>Frameworks &amp; simulation</h3>
+            <p>Model, integrate, and validate.</p>
+            <ul class="tags">
+              <li>ROS 2</li>
+              <li>MoveIt 2</li>
+              <li>Gazebo</li>
+              <li>PyBullet</li>
+              <li>URDF</li>
+            </ul>
+          </article>
+          <article class="skill-panel">
+            <span class="skill-icon" aria-hidden="true">ƒ(x)</span>
+            <h3>Robotics &amp; algorithms</h3>
+            <p>Turning geometry into motion.</p>
+            <ul class="tags">
+              <li>Forward &amp; inverse kinematics</li>
+              <li>DH parameters</li>
+              <li>Geometric Jacobian</li>
+              <li>Damped Least Squares</li>
+              <li>Numerical optimization</li>
+              <li>Trajectory planning</li>
+              <li>RRT / RRT*</li>
+              <li>Collision-aware planning</li>
+            </ul>
+          </article>
+          <article class="skill-panel">
+            <span class="skill-icon" aria-hidden="true">⎔</span>
+            <h3>Design &amp; development</h3>
+            <p>Connecting software and mechanics.</p>
+            <ul class="tags">
+              <li>AutoCAD</li>
+              <li>SolidWorks</li>
+              <li>Fusion</li>
+              <li>Git</li>
+              <li>Linux</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section
+        class="section shell experience"
+        id="experience"
+        aria-labelledby="experience-title"
+      >
+        <div>
+          <p class="section-label"><span>04 /</span> EXPERIENCE</p>
+          <h2 id="experience-title">
+            Applied engineering.<br />Real constraints.
+          </h2>
+          <p class="section-aside">
+            Robotics at the intersection of<br />mechanical design and software.
+          </p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-entry">
+            <div class="timeline-meta">
+              <span>MARCH 2023 — JUNE 2024</span><span>PUNE, INDIA</span>
+            </div>
+            <h3>System Design Scientist</h3>
+            <p class="organization">AeThrone Aerospace</p>
+            <p>
+              Designed a six-DOF Stewart platform for a ship-mounted drone
+              landing system, addressing landing-platform stability under vessel
+              pitch, roll, and yaw.
+            </p>
+            <ul class="contribution-list">
+              <li>
+                Created the platform’s CAD architecture and URDF description for
+                robotic modeling.
+              </li>
+              <li>
+                Developed forward and inverse kinematics and performed dynamic
+                analysis.
+              </li>
+              <li>
+                Integrated ROS and PyBullet for simulation-based evaluation of
+                motion compensation and stabilization behavior.
+              </li>
+            </ul>
+            <a class="text-link" href="#project-stewart"
+              >Explore the Stewart platform <span aria-hidden="true">↗</span></a
+            >
+          </article>
+        </div>
+      </section>
+      <section
+        class="section research-section"
+        id="research"
+        aria-labelledby="research-title"
+      >
+        <div class="shell research-layout">
+          <div>
+            <p class="section-label">
+              <span>05 /</span> RESEARCH &amp; PUBLICATIONS
+            </p>
+            <h2 id="research-title">
+              Better directions.<br />Smaller search spaces.
+            </h2>
+            <p class="research-affiliation">
+              IIT KANPUR <span> / </span> JUNE 2024
+            </p>
+            <p>
+              Co-authored research on the Kanpur version of the Zoutendijk
+              method for constrained nonlinear optimization, linking
+              feasible-direction algorithms with practical numerical
+              computation.
+            </p>
+            <a class="text-link" href="#project-optimization"
+              >Explore the research case study
+              <span aria-hidden="true">↗</span></a
+            >
+            <p class="publication-note">
+              Publication URL pending verification.
+            </p>
+          </div>
+          <div class="research-panel">
+            <p class="panel-label">KANPUR–ZOUTENDIJK / ALGORITHM NOTES</p>
+            <div class="research-equation">
+              <span>n</span><span class="equation-arrow">→</span><span>m</span
+              ><small>STATE SPACE → ACTIVE CONSTRAINTS &nbsp; (m ≤ n)</small>
+            </div>
+            <p>
+              Projecting the simplex LP subproblem onto the active-constraint
+              subspace.
+            </p>
+            <div class="research-metrics">
+              <div>
+                <strong>2–3.1<span>×</span></strong
+                ><span>Reported runtime improvement*</span>
+              </div>
+              <div>
+                <strong>2D–13D</strong
+                ><span>Non-convex benchmark problems</span>
               </div>
             </div>
-          </div>
-
-            <!-------------gallery 2------------->
-          <div class="gallery-item dl" data-aos="fade-right" data-aos-duration="1200" >
-            <div class="gallery-item-inner">
-              <img src="/img/work2.jpg" alt="dl">
-              <div class="overlay">
-                <h5>Brand #1</h5>
-                <p>More Info</p>
-              </div>
-            </div>
-          </div>
-
-            <!-------------gallery 3------------->
-          <div class="gallery-item cv" data-aos="fade-right" data-aos-duration="1200" >
-            <div class="gallery-item-inner">
-              <img src="/img/work3.jpg" alt="cv">
-              <div class="overlay">
-                <h5>Brand #1</h5>
-                <p>More Info</p>
-              </div>
-            </div>
-          </div>
-
-            <!-------------gallery 4------------->
-          <div class="gallery-item da" data-aos="fade-right" data-aos-duration="1200" >
-            <div class="gallery-item-inner">
-              <img src="/img/work3.jpg" alt="da">
-              <div class="overlay">
-                <h5>Brand #1</h5>
-                <p>More Info</p>
-              </div>
-            </div>
-          </div>
-
-            <!-------------gallery 5------------->  
-          <div class="gallery-item da" data-aos="fade-right" data-aos-duration="1200" >
-            <div class="gallery-item-inner">
-              <img src="/img/work4.jpg" alt="da">
-              <div class="overlay">
-                <h5>Brand #1</h5>
-                <p>More Info</p>
-              </div>
-            </div>
-          </div>
-        
-      </div>
-    </section>
-
-    <!-----------Service------------->
-    <section id="services">
-      <div class="heading-wrapper">
-          <div class="heading">
-              <h2>My Services</h2>
-          </div>
-          <div class="animate-bar"></div>
-          <div class="sub-heading">
-              <p>Quality services I can provide.</p>
-          </div>
-      </div>
-      <div class="container">
-        <!-----------service card------------->
-        <div class="service-card" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
-          <div class="card-content">
-            <i class="fa-solid fa-robot"></i>
-            <h5>Machine Learning</h5>
-            <p>hi i am a dev</p>
+            <p class="benchmark-note">
+              *Research benchmark result reported in the résumé; performance
+              depends on the problem and comparison baseline.
+            </p>
           </div>
         </div>
-        <!-----------end------------->
-
-        <!-----------service card------------->
-        <div class="service-card" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
-          <div class="card-content">
-            <i class="fa-solid fa-brain"></i>
-            <h5>Deep Learning</h5>
-            <p>hi i am a dev</p>
+      </section>
+      <section
+        class="section shell"
+        id="education"
+        aria-labelledby="education-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="section-label">
+              <span>06 /</span> EDUCATION &amp; CONTINUED LEARNING
+            </p>
+            <h2 id="education-title">Grounded in fundamentals.</h2>
           </div>
         </div>
-        <!-----------end------------->
-
-        <!-----------service card------------->
-        <div class="service-card" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
-          <div class="card-content">
-            <i class="fa-solid fa-chart-line"></i>
-            <h5>Data Analytics</h5>
-            <p>hi i am a dev</p>
-          </div>
+        <div class="education-grid">
+          <article class="education-card">
+            <span class="education-year">JUNE 2023</span
+            ><span class="degree-mark" aria-hidden="true">M.Tech</span>
+            <h3>Indian Institute of Technology Kanpur</h3>
+            <p class="degree">Robotics &amp; Automation</p>
+            <p>
+              Robotics, motion planning, numerical optimization, CAD, and
+              advanced mathematics.
+            </p>
+            <span class="location">Kanpur, Uttar Pradesh, India</span>
+          </article>
+          <article class="education-card">
+            <span class="education-year">JUNE 2019</span
+            ><span class="degree-mark" aria-hidden="true">B.Tech</span>
+            <h3>Kalyani Government Engineering College</h3>
+            <p class="degree">Mechanical Engineering</p>
+            <p>
+              Mechanical design, dynamics, and hands-on mechatronic development.
+            </p>
+            <span class="distinction">Graduated with Distinction</span
+            ><span class="location">Kalyani, West Bengal, India</span>
+          </article>
         </div>
-        <!-----------end------------->
-
-        <!-----------service card------------->
-        <div class="service-card" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
-          <div class="card-content">
-            <i class="fa-solid fa-eye"></i>
-            <h5>Computer Vision</h5>
-            <p>hi i am a dev</p>
-          </div>
-        </div>
-        <!-----------end------------->
-
-        <!-----------service card------------->
-        <div class="service-card" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
-          <div class="card-content">
-            <i class="fa-solid fa-database"></i>
-            <h5>Database Management</h5>
-            <p>hi i am a dev</p>
-          </div>
-        </div>
-        <!-----------end------------->
-
-        <!-----------service card------------->
-        <div class="service-card" data-aos="fade-right" data-aos-duration="1200" data-aos-easing="ease-in-out">
-          <div class="card-content">
-            <i class="fa-solid fa-pen-to-square"></i>
-            <h5>Web Development</h5>
-            <p>hi i am a dev</p>
-          </div>
-        </div>
-        <!-----------end------------->
-      </div>
-  </section>
-
-
-    <!-------------Blog------------->
-  <section id="blogs">
-    <div class="heading-wrapper">
-      <div class="heading">
-        <h2>Recent News</h2>
-      </div>
-      <div class="animate-bar"></div>
-      <div class="sub-heading">
-        <p>Here you can see some of my blog's I've shared on my own time.</p>
-      </div>
-    </div>
-
-    <div class="container">
-      <!-------------Blog start------------->
-      <div class="blog blog-1" data-aos="fade-right" data-aos-duration="1200" > 
-        <div class="img-box">
-          <img src="img/background1.png" alt="">
-        </div>
-      
-      <h6>temminds to the space</h6>
-      <p>intto the begin</p>
-      <button><a href="#">Read More</a></button>
-      </div>
-      <!-------------Blog end------------->
-
-      <!-------------Blog start------------->
-      <div class="blog blog-2" data-aos="fade-right" data-aos-duration="1200" > 
-        <div class="img-box">
-          <img src="img/background1.png" alt="">
-        </div>
-        
-      <h6>temminds to the space</h6>
-      <p>intto the begin</p>
-      <button><a href="#">Read More</a></button>
-      </div>
-      <!-------------Blog end------------->
-
-
-      <!-------------Blog start------------->
-      <div class="blog blog-3" data-aos="fade-right" data-aos-duration="1200" > 
-        <div class="img-box">
-          <img src="img/background1.png" alt="">
-        </div>
-        
-      <h6>temminds to the space</h6>
-      <p>intto the begin</p>
-      <button><a href="#">Read More</a></button>
-      </div>
-      <!-------------Blog end------------->
-    </div>
-  </section>
-
-    <!-------------Contact------------->
-    <section id="contact">
-      <div class="heading-wrapper">
-        <div class="heading">
-          <h2>Get in touch</h2>
-        </div>
-        <div class="animate-bar"></div>
-      </div>
-
-
-      <!-----get in touch-->
-      <div class="container" data-aos="fade-right" data-aos-duration="1200" >
-        <!---smtp password:0744EC22550FD3DC3A000C45AC3541B21384-->
-        <form onsubmit="sendEmail(); reset(); return false;">
-          <div class="title">
-            <h4>message Me</h4>
-          </div>
-
-          <div class="from-row">
-            <div class="input-data">
-              <input type="text" id="name" placeholder="Name" required>
-            </div>
-
-            <div class="input-data">
-              <input type="text" id="email" placeholder="Email" required>
-            </div>
-          </div>
-
-          <div class="input-data">
-            <input type="text" id="subject" placeholder="Subject" required>
-          </div>
-          
-          <div class="input-data">
-            <textarea type="message" id="message" placeholder="Message" required></textarea>
-          </div>
-          <div class="input-data">
-            <input type="submit" value="Send Your Message" class="btn">
-          </div>
-        </form>
-
-
-        <!-------Contact details----->
-        <div class="contact-info" data-aos="fade-right" data-aos-duration="1200" >
-          <div class="title">
-            <h4>Contact Info</h4>
-          </div>
-          <div class="subtitle">
-            <p>Always available for freelance work, if the right project comes along. Feel free to contact me!</p>
-          </div>
-
-          <ul class="contact-list">
-            <!-------listicon start------->
-            <li class="list-item">
-              <div class="icon">
-                <i class="fa-brands fa-hive"></i>
-              </div>
-              <div class="details">
-                <label for="#">Name</label>
-                <p>Monojit Layek</p>
-              </div>
+        <div class="certifications">
+          <h3>Continued learning</h3>
+          <ul>
+            <li>
+              <span>Deep Learning Specialization</span
+              ><span>DeepLearning.AI <i>FEB 2023</i></span>
             </li>
-            <!---------end--------------->
-
-            <!-------listicon start------->
-            <li class="list-item">
-              <div class="icon">
-                <i class="fa-solid fa-globe"></i>
-              </div>
-              <div class="details">
-                <label for="#">Location</label>
-                <p>Durgapur, W.B, India</p>
-              </div>
+            <li>
+              <span>Machine Learning Specialization</span
+              ><span>Stanford <i>AUG 2021</i></span>
             </li>
-            <!---------end--------------->
-
-            <!-------listicon start------->
-            <li class="list-item">
-              <div class="icon">
-                <i class="fa-solid fa-phone"></i>
-              </div>
-              <div class="details">
-                <label for="#">Ph. Number</label>
-                <p>+91 9593141413</p>
-              </div>
+            <li>
+              <span>Data Structures &amp; Algorithms</span
+              ><span>Udemy <i>JUL 2021</i></span>
             </li>
-            <!---------end--------------->
-
-            <!-------list icon start------->
-            <li class="list-item">
-              <div class="icon">
-                <i class="fa-solid fa-at"></i>
-              </div>
-              <div class="details">
-                <label for="#">Email</label>
-                <p>mlayek@icloud.com</p>
-              </div>
-            </li>
-            <!---------end--------------->
           </ul>
         </div>
-      </div>
-      <script src="https://smtpjs.com/v3/smtp.js"></script>
-      <script>
-        function sendEmail(){
-          Email.send({
-              SecureToken : "c14c42e9-fba2-4adc-9e78-673705181fc5",
-              To : 'mlayek21@iitk.ac.in',
-              From : 'mlayek3@gmail.com',
-              Subject : document.getElementById("subject").value,
-              Body : "Name: " + document.getElementById("name").value + 
-              "<br> Email: " + document.getElementById("email").value +
-              "<br> Subject: " + document.getElementById("subject").value +
-              "<br> Message: " + document.getElementById("message").value 
-          }).then(
-            message => alert('Message Sent Successfully')
-          );
-        }
-      </script>
-      
-    </section>
-
-    <!----------- Footer ------------->
-    <footer>
-      <p>Website is Designed by Monojit Layek 2022 </p>
+      </section>
+      <section
+        class="contact-section"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="shell contact-layout">
+          <div>
+            <p class="section-label"><span>07 /</span> LET’S CONNECT</p>
+            <h2 id="contact-title">
+              Let’s build what<br /><em>moves next.</em>
+            </h2>
+            <p>
+              Have a robotics, motion planning, or autonomous systems
+              opportunity?<br />I’d love to hear about the engineering
+              challenge.
+            </p>
+            <a class="contact-email" href="mailto:mlayek@icloud.com"
+              >mlayek@icloud.com <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="contact-links">
+            <a href="https://github.com/mlayek21" target="_blank" rel="noopener"
+              ><span>GitHub<small>Explore my code</small></span
+              ><span aria-hidden="true">↗</span></a
+            ><a
+              href="https://www.linkedin.com/in/mlayek"
+              target="_blank"
+              rel="noopener"
+              ><span>LinkedIn<small>Connect professionally</small></span
+              ><span aria-hidden="true">↗</span></a
+            ><a href="/assets/resume/Monojit-Layek-Resume.pdf" download
+              ><span
+                >Download résumé<small
+                  >Experience, projects &amp; qualifications · PDF</small
+                ></span
+              ><span aria-hidden="true">↓</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer shell">
+      <a class="brand" href="#home"
+        ><span class="brand-mark" aria-hidden="true">m<span>.</span></span
+        ><span>Monojit Layek</span></a
+      ><span>Robotics. Mathematics. Engineering.</span
+      ><a href="https://mlayek.netlify.app/"
+        >mlayek.netlify.app <span aria-hidden="true">↗</span></a
+      ><a class="back-top" href="#home">Back to top ↑</a>
     </footer>
-
-    <!-----------jqury scripts------------->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <!-----------owl carousel scripts------------->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <!-----------AOS scripts------------->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <!-----------local script------------->
-    <script src="/script.js"></script>
   </body>
 </html>

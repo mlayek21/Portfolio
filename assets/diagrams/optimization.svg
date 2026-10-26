@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Feasible-direction optimization conceptual schematic</title><desc id="desc">Illustrative objective contours intersect a constraint boundary, with a sequence of feasible-direction steps approaching a constrained stationary point. Not a measured result or benchmark plot.</desc>
+  <defs><linearGradient id="region" x1="200" y1="100" x2="450" y2="280" gradientUnits="userSpaceOnUse"><stop stop-color="#2e7277" stop-opacity=".13"/><stop offset="1" stop-color="#2e7277" stop-opacity=".02"/></linearGradient><clipPath id="plot"><rect x="88" y="51" width="474" height="251"/></clipPath></defs>
+  <g stroke="#24394e" stroke-width=".7"><path d="M88 92h474M88 134h474M88 176h474M88 218h474M88 260h474M135 51v251m47-251v251m47-251v251m47-251v251m47-251v251m47-251v251m47-251v251m47-251v251m47-251v251"/></g>
+  <g clip-path="url(#plot)"><path d="M88 92c151 8 167 74 223 106s133 32 251-35v139H88Z" fill="url(#region)"/>
+  <g transform="rotate(-28 351 168)" stroke="#557191" stroke-width="1.2"><ellipse cx="351" cy="168" rx="49" ry="28"/><ellipse cx="351" cy="168" rx="84" ry="49"/><ellipse cx="351" cy="168" rx="119" ry="71"/><ellipse cx="351" cy="168" rx="155" ry="93"/><ellipse cx="351" cy="168" rx="193" ry="117"/><ellipse cx="351" cy="168" rx="234" ry="143"/></g>
+  <path d="M88 92c151 8 167 74 223 106s133 32 251-35" stroke="#8d9edb" stroke-width="2"/>
+  <path d="m139 263 78-11 63-23 46-14 36-9 21-4" stroke="#79e0d4" stroke-width="2.1" stroke-linejoin="round"/>
+  <g fill="#192c40" stroke="#80e7dc" stroke-width="1.6"><circle cx="139" cy="263" r="5"/><circle cx="217" cy="252" r="4"/><circle cx="280" cy="229" r="4"/><circle cx="326" cy="215" r="4"/><circle cx="362" cy="206" r="4"/><circle cx="383" cy="202" r="5"/></g>
+  <path d="m238 246 25-8-10-4m10 4-7 10m40-25 17-5-8-4m8 4-4 8" stroke="#79e0d4" stroke-width="1.4"/>
+  <circle cx="383" cy="202" r="13" stroke="#80e7dc" stroke-dasharray="2 4"/>
+  <path d="m351 168 32 34" stroke="#91a2b9" stroke-dasharray="3 5"/><path d="m345 168h12m-6-6v12" stroke="#b3c2d4"/>
+  </g>
+  <path d="M88 51v251h474m-5-4 5 4-5 4M84 56l4-5 4 5" stroke="#7d95ab" stroke-width="1"/>
+  <g stroke="#638296" stroke-width=".8"><path d="m191 253-40-55H104m282 5 57 45h82m-64-50 34-45h53"/></g>
+  <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="9" fill="#a1b5c6" letter-spacing="1.1"><text x="105" y="190" fill="#8ae3d9">FEASIBLE STEPS</text><text x="444" y="265">CONSTRAINED POINT</text><text x="480" y="144" fill="#aaaee3">g(x) = 0</text><text x="493" y="287" fill="#65b9b3">FEASIBLE REGION</text><text x="570" y="306">x₁</text><text x="80" y="40">x₂</text></g>
+  <text x="26" y="336" fill="#718b9d" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="8" letter-spacing="1.8">CONCEPTUAL SCHEMATIC · NOT BENCHMARK DATA</text>
+</svg>

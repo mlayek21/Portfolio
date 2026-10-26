@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Stewart platform conceptual schematic</title><desc id="desc">Six extensible legs connect a fixed hexagonal base to a moving platform. Ghosted platform outlines indicate pitch and roll. Conceptual drawing, not project CAD.</desc>
+  <defs><linearGradient id="plate" x1="240" y1="96" x2="370" y2="265" gradientUnits="userSpaceOnUse"><stop stop-color="#4d657f"/><stop offset="1" stop-color="#172c42"/></linearGradient><linearGradient id="leg"><stop stop-color="#b3c7db"/><stop offset=".45" stop-color="#567b9b"/><stop offset="1" stop-color="#18304b"/></linearGradient></defs>
+  <g stroke="#22384b" stroke-width=".7" opacity=".65"><path d="m93 256 220-119 225 119-219 119Z"/><path d="m139 280 220-119m-176 143 220-119m-176 143 220-119m-176 143 220-119M139 232l225 119M183 208l225 119M227 184l225 119M271 160l225 119"/></g>
+  <path d="m211 249 60-46 104 7 62 52-60 45-104-7Z" fill="url(#plate)" stroke="#748ca4" stroke-width="1.2"/>
+  <path d="m211 249 62 51 104 7 60-45v12l-60 45-104-7-62-51Z" fill="#172b42" stroke="#4a657f"/>
+  <g stroke-linecap="round"><path d="m233 254 57-118m-5 155-56-165m78 177 88-151m28 117-29-148m-13 169-98-155m137 135-40-157" stroke="#17283d" stroke-width="11"/><path d="m233 254 57-118m-5 155-56-165m78 177 88-151m28 117-29-148m-13 169-98-155m137 135-40-157" stroke="url(#leg)" stroke-width="7"/>
+  <path d="m233 254 30-63m22 100-26-80m48 92 44-76m72 42-14-72m-28 93-46-72m105 52-18-72" stroke="#7eabc3" stroke-width="10"/><path d="m233 254 30-63m22 100-26-80m48 92 44-76m72 42-14-72m-28 93-46-72m105 52-18-72" stroke="#315774" stroke-width="6"/></g>
+  <g fill="#243c53" stroke="#8de4dc"><circle cx="233" cy="254" r="5"/><circle cx="285" cy="291" r="5"/><circle cx="307" cy="303" r="5"/><circle cx="423" cy="269" r="5"/><circle cx="381" cy="290" r="5"/><circle cx="440" cy="270" r="5"/></g>
+  <path d="m220 124 61-45 99 7 61 53-61 44-99-7Z" fill="#29485d" fill-opacity=".13" stroke="#5f938e" stroke-dasharray="4 6" transform="rotate(-8 330 130)"/>
+  <path d="m220 124 61-45 99 7 61 53-61 44-99-7Z" fill="url(#plate)" stroke="#a0c5d3" stroke-width="1.2"/>
+  <path d="m220 124 61 52 99 7 61-44v10l-61 44-99-7-61-52Z" fill="#18344b" stroke="#7096ae"/>
+  <path d="m251 124 36-26 74 5 48 36-36 26-74-5Z" fill="#203e53" stroke="#56868e"/>
+  <path d="m301 116 37-14 29 27-37 16Z" fill="#315e67" stroke="#78d8d1"/><path d="m330 145 37-16v6l-37 16-29-29v-6Z" fill="#1d424e" stroke="#78d8d1"/>
+  <g fill="#73dfd8"><circle cx="229" cy="126" r="4"/><circle cx="290" cy="136" r="4"/><circle cx="395" cy="152" r="4"/><circle cx="394" cy="121" r="4"/><circle cx="283" cy="135" r="4"/><circle cx="400" cy="113" r="4"/></g>
+  <path d="M191 99c18-33 66-48 106-34m-14-9 14 9-15 7M458 150c16 24 17 57 0 79m12-5-12 5-2-14" stroke="#66d9d3" stroke-width="1.2"/>
+  <g stroke="#56768a" stroke-width=".8"><path d="m273 89-57-31h-79m285 152 47-27h80m-202 132 37 18h78"/></g>
+  <g fill="#99afbf" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="9" letter-spacing="1.2"><text x="116" y="49">MOVING PLATFORM</text><text x="472" y="174">6 LINEAR LEGS</text><text x="392" y="330">FIXED BASE</text><text x="156" y="89" fill="#76d9d3">ROLL / PITCH</text></g>
+  <text x="26" y="336" fill="#718b9d" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="8" letter-spacing="1.8">CONCEPTUAL SCHEMATIC</text>
+</svg>

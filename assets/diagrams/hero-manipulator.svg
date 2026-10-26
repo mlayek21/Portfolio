@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 600" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Six-axis robotic manipulator, conceptual schematic</title>
+  <desc id="desc">Illustrative articulated robotic arm on an isometric coordinate grid, with six joint axes and a cyan end-effector trajectory. This is a conceptual drawing, not a project simulation.</desc>
+  <defs>
+    <linearGradient id="metal" x1="190" y1="190" x2="420" y2="440" gradientUnits="userSpaceOnUse"><stop stop-color="#546580"/><stop offset=".45" stop-color="#29394f"/><stop offset="1" stop-color="#152235"/></linearGradient>
+    <linearGradient id="lightMetal" x1="250" y1="210" x2="390" y2="320" gradientUnits="userSpaceOnUse"><stop stop-color="#718097"/><stop offset="1" stop-color="#34455d"/></linearGradient>
+    <linearGradient id="base" x1="295" y1="370" x2="404" y2="471" gradientUnits="userSpaceOnUse"><stop stop-color="#3b4c66"/><stop offset="1" stop-color="#18263b"/></linearGradient>
+    <linearGradient id="cyan" x1="202" y1="220" x2="515" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#8cf0e4"/><stop offset="1" stop-color="#3fc7d5"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#43bfc6" stop-opacity=".10"/><stop offset="1" stop-color="#43bfc6" stop-opacity="0"/></radialGradient>
+  </defs>
+  <ellipse cx="365" cy="323" rx="281" ry="244" fill="url(#halo)"/>
+  <g stroke="#25394b" stroke-width=".8" opacity=".65">
+    <path d="m61 425 309-174 309 174-309 174Z"/>
+    <path d="m92 442 309-174m-278 191 309-174m-278 191 309-174m-278 191 309-174m-278 191 309-174m-278 191 309-174m-278 191 309-174m-278 191 309-174m-278 191 309-174"/>
+    <path d="m92 408 309 174M123 391l309 174M154 374l309 174M185 357l309 174M216 340l309 174M247 323l309 174M278 306l309 174M309 289l309 174M340 272l309 174"/>
+  </g>
+  <path d="m61 425 309 174 309-174M370 251v348" stroke="#365267" stroke-width="1" stroke-dasharray="3 7"/>
+  <ellipse cx="354" cy="468" rx="110" ry="36" fill="#050c16" opacity=".6"/>
+  <!-- Base plate and vertical first-axis bearing. -->
+  <path d="m281 440 68-39 80 42v23l-68 39-80-43Z" fill="#142338" stroke="#52657c"/>
+  <path d="m281 440 80 43 68-40-80-42Z" fill="#3b4d64" stroke="#718097"/>
+  <path d="m361 483 68-40v23l-68 39Z" fill="#1c3048" stroke="#3c526b"/>
+  <g fill="#101d2e" stroke="#8191a5"><ellipse cx="299" cy="442" rx="5" ry="3"/><ellipse cx="349" cy="414" rx="5" ry="3"/><ellipse cx="410" cy="443" rx="5" ry="3"/><ellipse cx="362" cy="472" rx="5" ry="3"/></g>
+  <path d="M317 406v36c0 25 77 25 77 0v-36" fill="url(#base)" stroke="#536880"/>
+  <ellipse cx="355.5" cy="406" rx="38.5" ry="21" fill="#465973" stroke="#8491a5"/>
+  <path d="M318 434c6 24 70 24 76 0" stroke="#57d8d2" stroke-width="2"/>
+  <path d="M333 399v-52l22-16 28 15v53c0 15-50 18-50 0Z" fill="url(#metal)" stroke="#657892"/>
+  <path d="m355 331 28 15-25 16-25-15Z" fill="#5c6d83" stroke="#8a98ab"/>
+  <!-- Shoulder, upper arm, and elbow: parallel side faces show link thickness. -->
+  <path d="m335 369-99-108-11-30 28-17 23 18 91 110Z" fill="url(#metal)" stroke="#708199" stroke-width="1.2"/>
+  <path d="m253 214 23 18 91 110-23 14-101-112Z" fill="url(#lightMetal)" stroke="#8794a6"/>
+  <path d="m244 247 101 110" stroke="#a3b0bd" stroke-opacity=".55" stroke-width="2"/>
+  <path d="m254 258 79 88" stroke="#4ed8d3" stroke-width="2"/>
+  <ellipse cx="350" cy="357" rx="26" ry="33" transform="rotate(-29 350 357)" fill="#192a40" stroke="#8090a5" stroke-width="1.4"/>
+  <ellipse cx="348" cy="356" rx="18" ry="24" transform="rotate(-29 348 356)" stroke="#60d8d5" stroke-width="2"/>
+  <ellipse cx="348" cy="356" rx="7" ry="10" transform="rotate(-29 348 356)" fill="#5f7087" stroke="#8a9bab"/>
+  <path d="m239 215 144-61 24 21-7 21-141 65Z" fill="url(#metal)" stroke="#75849a" stroke-width="1.2"/>
+  <path d="m239 215 23-14 136-62 18 20-33-5Z" fill="#5b6d85" stroke="#8a99ac"/>
+  <path d="m261 233 125-57" stroke="#b8c4d1" stroke-opacity=".4" stroke-width="2"/>
+  <path d="m263 246 120-54" stroke="#5adbd7" stroke-width="2"/>
+  <ellipse cx="248" cy="236" rx="27" ry="34" transform="rotate(-29 248 236)" fill="#23354c" stroke="#91a0b3" stroke-width="1.4"/>
+  <ellipse cx="245" cy="235" rx="19" ry="25" transform="rotate(-29 245 235)" stroke="#6be0d9" stroke-width="2"/>
+  <ellipse cx="245" cy="235" rx="8" ry="11" transform="rotate(-29 245 235)" fill="#5d718a" stroke="#90a1b7"/>
+  <!-- Forearm roll housing, wrist pitch, and tool rotation. -->
+  <path d="m384 148 20-10 69 72-17 13-19-6-57-57Z" fill="url(#metal)" stroke="#8190a5"/>
+  <path d="m404 138 69 72-17 13-65-71Z" fill="#4b5e77" stroke="#8c9bb0"/>
+  <path d="m418 167 35 36" stroke="#72e5dd" stroke-width="2"/>
+  <ellipse cx="391" cy="163" rx="21" ry="27" transform="rotate(-29 391 163)" fill="#1f324a" stroke="#91a1b6" stroke-width="1.3"/>
+  <ellipse cx="390" cy="163" rx="13" ry="18" transform="rotate(-29 390 163)" stroke="#6be0d9" stroke-width="2"/>
+  <ellipse cx="391" cy="163" rx="5" ry="7" transform="rotate(-29 391 163)" fill="#7a8da7"/>
+  <path d="m444 208 15-10 32 31v23l-15 10-23-17Z" fill="#273b54" stroke="#8194aa"/>
+  <path d="m459 198 32 31-15 10-32-31Z" fill="#5d7089" stroke="#a0acbb"/>
+  <ellipse cx="463" cy="231" rx="16" ry="20" transform="rotate(-29 463 231)" fill="#1a2e45" stroke="#91a4b9"/>
+  <ellipse cx="463" cy="231" rx="10" ry="13" transform="rotate(-29 463 231)" stroke="#6ae1da" stroke-width="2"/>
+  <path d="m475 251 15-8 15 15-15 9Z" fill="#596e89" stroke="#96a8bc"/>
+  <path d="m490 267 15-9v14l-15 9Z" fill="#274059" stroke="#708aa4"/>
+  <path d="m486 273-10 14 5 19 7-4-2-14 9-10m8-13 13 8 1 17-7 4-2-16-10-6" fill="#3a526d" stroke="#91a6bc" stroke-width="1.3"/>
+  <!-- An explicitly illustrative end-effector path. -->
+  <path d="M491 299c39-117 171-105 135 9-18 56-77 68-102 118" stroke="#63ded7" stroke-width="1.7" stroke-dasharray="5 7"/>
+  <path d="M491 299c39-117 171-105 135 9" stroke="#63ded7" stroke-width="7" opacity=".08"/>
+  <circle cx="491" cy="299" r="5" fill="#79e8de"/><circle cx="524" cy="426" r="5" stroke="#7feadd" stroke-width="1.5"/>
+  <g stroke="#61d7d2" stroke-width="1"><path d="m479 299 24 0m-12-12v24M515 426h18m-9-9v18"/></g>
+  <path d="m497 437 27-16 30 17v28l-27 16-30-17Z" fill="#244449" fill-opacity=".3" stroke="#478a90"/>
+  <path d="m497 437 30 17 27-16m-27 16v28" stroke="#478a90"/>
+  <!-- World coordinate frame and restrained callouts. -->
+  <g stroke-width="1.2"><path d="m128 451 48 27" stroke="#86a9d5"/><path d="m128 451 44-26" stroke="#69d9ce"/><path d="M128 451v-49" stroke="#b1b9cd"/></g>
+  <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="11" letter-spacing="1"><text x="183" y="484" fill="#86a9d5">X</text><text x="179" y="424" fill="#69d9ce">Y</text><text x="124" y="392" fill="#b1b9cd">Z</text></g>
+  <g stroke="#58738a" stroke-width=".8"><path d="m233 220-44-47h-72"/><path d="m406 148 35-42h92"/><path d="m603 250 30-40h48"/><path d="m354 411-79 30h-67"/></g>
+  <g fill="#91a9bb" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="10" letter-spacing="1.2"><text x="113" y="164">KINEMATIC CHAIN</text><text x="446" y="97">6 AXES / SE(3)</text><text x="588" y="201">TOOL PATH</text><text x="115" y="436">BASE FRAME</text></g>
+  <g fill="#69dcd5"><circle cx="233" cy="220" r="2"/><circle cx="406" cy="148" r="2"/><circle cx="603" cy="250" r="2"/><circle cx="354" cy="411" r="2"/></g>
+  <text x="374" y="565" text-anchor="middle" fill="#6c8398" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="9" letter-spacing="2">CONCEPTUAL SCHEMATIC</text>
+</svg>

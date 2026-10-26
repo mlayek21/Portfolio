@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Magnetic reciprocating actuator conceptual schematic</title><desc id="desc">A solenoid drives a constrained slider linked to a rotating crank, with a feedback signal from a position sensor to a microcontroller. This is a conceptual drawing, not a prototype photograph.</desc>
+  <defs><linearGradient id="metal" x1="120" y1="143" x2="353" y2="247" gradientUnits="userSpaceOnUse"><stop stop-color="#60778d"/><stop offset="1" stop-color="#223c52"/></linearGradient></defs>
+  <g stroke="#253b4f" stroke-width=".8" opacity=".6"><path d="M64 258h510M64 290h510M64 226h510M64 194h510M64 162h510M96 130v192m48-192v192m48-192v192m48-192v192m48-192v192m48-192v192m48-192v192m48-192v192m48-192v192m48-192v192"/></g>
+  <path d="M77 248h257v10H77z" fill="#1f3d51" stroke="#5b7e92"/><path d="M97 162h181v13H97zm0 63h181v13H97z" fill="#1c344b" stroke="#627f96"/>
+  <path d="M111 159h112v75H111z" fill="#142b41" stroke="#89a0b4"/>
+  <g stroke="#6ad4cc" stroke-width="2.1"><path d="M120 163c15-11 15 81 0 67m11-67c15-11 15 81 0 67m11-67c15-11 15 81 0 67m11-67c15-11 15 81 0 67m11-67c15-11 15 81 0 67m11-67c15-11 15 81 0 67m11-67c15-11 15 81 0 67m11-67c15-11 15 81 0 67m11-67c15-11 15 81 0 67"/></g>
+  <path d="M90 186h176v22H90z" fill="url(#metal)" stroke="#8ea9c0"/><path d="M244 179h35v36h-35z" fill="#3a5b73" stroke="#9bb6ca"/>
+  <path d="m268 194 149-44 5 17-149 44Z" fill="#3c5a74" stroke="#94adc3"/>
+  <circle cx="431" cy="212" r="69" fill="#13283c" stroke="#6c8ba4" stroke-width="2"/><circle cx="431" cy="212" r="58" stroke="#45647e" stroke-dasharray="3 8"/><path d="m431 212-16-53" stroke="#768fa8" stroke-width="10"/><circle cx="415" cy="159" r="8" fill="#17344b" stroke="#7ce1d7" stroke-width="2"/><circle cx="431" cy="212" r="13" fill="#3c586f" stroke="#a1b9ca"/><circle cx="431" cy="212" r="5" fill="#6dd9d2"/><circle cx="268" cy="197" r="7" fill="#1e3c51" stroke="#8bb5ca"/>
+  <path d="m431 225 18 34v12h-36v-12Z" fill="#254159" stroke="#7997ae"/>
+  <path d="M397 130c40-18 86 5 97 43m-1-13 1 13-13-5" stroke="#6ee0d5" stroke-width="1.2"/>
+  <path d="M244 143h42m-36-5-6 5 6 5m30-10 6 5-6 5" stroke="#8fe6de"/>
+  <path d="M261 220v14m-12-7h24" stroke="#9fa5da" stroke-width="2"/><path d="m261 240 0 50h-99v-34" stroke="#9fa5da" stroke-width="1.1" stroke-dasharray="4 5"/>
+  <rect x="91" y="66" width="128" height="44" rx="4" fill="#172e43" stroke="#52758d"/>
+  <path d="M132 79h43v18h-43zM140 75v4m10-4v4m10-4v4m10-4v4m-30 18v4m10-4v4m10-4v4m10-4v4" stroke="#80d9d2"/>
+  <path d="M112 110v30m0-8v8h-8M261 227h39V88h-81" stroke="#9ca4d5" stroke-width="1" stroke-dasharray="4 5"/>
+  <g stroke="#58788e" stroke-width=".8"><path d="m185 167 49-48h87m-167 112-41 39H71m353-66 89-22h47"/></g>
+  <g font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="9" fill="#9cb3c3" letter-spacing="1.1"><text x="238" y="111">SOLENOID COIL</text><text x="73" y="285">LINEAR MOTION</text><text x="513" y="175">ROTARY OUTPUT</text><text x="240" y="72" fill="#a5a9dc">POSITION FEEDBACK</text><text x="96" y="58">ARDUINO CONTROL</text><text x="162" y="309" fill="#a5a9dc">PHOTOELECTRIC SENSOR</text></g>
+  <text x="26" y="336" fill="#718b9d" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="8" letter-spacing="1.8">CONCEPTUAL SCHEMATIC</text>
+</svg>

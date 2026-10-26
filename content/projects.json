@@ -1,0 +1,144 @@
+[
+  {
+    "id": "dobot",
+    "category": "motion robotics",
+    "categoryLabel": "Robotics software / Motion planning",
+    "title": "6-Axis Dobot Manipulator",
+    "subtitle": "Motion Planning Stack",
+    "date": "October 2022",
+    "datetime": "2022-10",
+    "organization": "Personal project",
+    "summary": "A C++ / ROS 2 motion-planning stack connecting numerical inverse kinematics, trajectory generation, and collision-aware pick-and-place planning.",
+    "tags": ["C++", "ROS 2 Humble", "MoveIt 2", "Gazebo", "PyBullet"],
+    "image": "manipulator.svg",
+    "imageAlt": "Conceptual robot manipulator and end-effector path, not a simulation capture",
+    "outcome": "From robot description to simulation-validated motion",
+    "problem": "Plan and execute collision-aware motion for a six-axis manipulator, while handling inverse-kinematics sensitivity near singular configurations and generating controlled motion between targets.",
+    "pipeline": [
+      "Robot description",
+      "Kinematics / IK",
+      "Path planning",
+      "Time profiling",
+      "Simulation"
+    ],
+    "contributions": [
+      "Developed a full ROS 2 Humble motion-planning stack in C++ for a six-axis manipulator.",
+      "Implemented numerical inverse kinematics using Damped Least Squares, a geometric Jacobian, and a singularity-robust pseudoinverse.",
+      "Developed cubic-spline trajectory interpolation with trapezoidal and quintic-polynomial velocity profiles.",
+      "Integrated RRT/RRT* and MoveIt 2 for collision-aware planning within a pick-and-place pipeline.",
+      "Validated robotic motion in both Gazebo and PyBullet."
+    ],
+    "method": "The robot description provides the link and joint structure for kinematic modeling. The inverse-kinematics solver maps end-effector targets into joint configurations. Collision-aware planning connects configurations, followed by interpolation and velocity profiling to produce the motion reference evaluated in simulation.",
+    "validation": "Evaluation was performed in Gazebo and PyBullet simulations. No real-robot deployment, success-rate metric, or timing guarantee is claimed. Trapezoidal and quintic profiles are described separately without assuming all generated motion is jerk-free.",
+    "media": "RViz / Gazebo screenshots, PyBullet pick-and-place captures, and joint-position / velocity trajectory plots.",
+    "source": null
+  },
+  {
+    "id": "stewart",
+    "category": "robotics controls",
+    "categoryLabel": "Parallel robotics / Stabilization",
+    "title": "6-DOF Stewart Platform",
+    "subtitle": "Ship-Mounted Drone Landing",
+    "date": "March 2023 – June 2024",
+    "datetime": "2023-03",
+    "organization": "AeThrone Aerospace · Pune, India",
+    "summary": "A parallel robotic landing platform designed to compensate for vessel motion, combining mechanical design, kinematic modeling, and simulation.",
+    "tags": ["CAD", "URDF", "ROS", "PyBullet", "Kinematics"],
+    "image": "stewart.svg",
+    "imageAlt": "Conceptual Stewart platform with six connecting struts and motion axes",
+    "outcome": "Six degrees of freedom. One stabilization problem.",
+    "problem": "A ship-mounted drone landing surface must account for changing vessel orientation. The engineering problem was to model a six-DOF parallel platform capable of compensating for pitch, roll, and yaw disturbances.",
+    "pipeline": [
+      "Mechanical CAD",
+      "URDF model",
+      "FK / IK",
+      "Dynamics",
+      "ROS / PyBullet"
+    ],
+    "contributions": [
+      "Designed the mechanical architecture of a six-degree-of-freedom Stewart platform.",
+      "Created detailed CAD geometry and a URDF description for robotic modeling and simulation.",
+      "Developed forward and inverse kinematic models linking platform pose and leg configuration.",
+      "Performed dynamic analysis and integrated robotic software using ROS and PyBullet.",
+      "Evaluated platform motion and stabilization behavior against pitch, roll, and yaw disturbances in simulation."
+    ],
+    "method": "The parallel mechanism links a fixed base to a moving platform through six struts. Kinematic modeling relates the desired platform pose to the strut configurations, while CAD and URDF descriptions carry the mechanism into simulation. Dynamic analysis complements the pose model when examining stabilization behavior.",
+    "validation": "The résumé documents simulation-based evaluation in ROS / PyBullet. The verified public repository contains CAD, URDF, inverse-kinematics code, and PyBullet simulation. Commercial deployment, drone landing trials, and shipboard testing are not claimed.",
+    "media": "Original CAD assembly views, a PyBullet motion-compensation recording, and platform-pose response plots.",
+    "source": "https://github.com/mlayek21/Stewart-Platform"
+  },
+  {
+    "id": "actuator",
+    "category": "controls",
+    "categoryLabel": "Mechatronics / Hardware prototype",
+    "title": "Magnetic Reciprocating Actuator",
+    "subtitle": "Mechatronic Design & Closed-Loop Control",
+    "date": "July 2019",
+    "datetime": "2019-07",
+    "organization": "Kalyani Government Engineering College",
+    "summary": "A designed, fabricated, and tested electromagnetic actuator with Arduino control, position feedback, and a slider-crank mechanism for rotary output.",
+    "tags": ["CAD", "Arduino", "Embedded control", "Sensors", "Dynamics"],
+    "image": "actuator.svg",
+    "imageAlt": "Conceptual magnetic actuator, slider-crank mechanism, and closed-loop feedback path",
+    "outcome": "Physical fabrication, electronics, and closed-loop testing",
+    "problem": "Convert electromagnetically driven reciprocating motion into continuous rotary output, and coordinate actuation with mechanism position using a closed-loop microcontroller system.",
+    "pipeline": [
+      "Analytical model",
+      "CAD design",
+      "Fabrication",
+      "Arduino control",
+      "Prototype testing"
+    ],
+    "contributions": [
+      "Modeled a constrained slider-crank mechanism and analyzed conversion of linear reciprocation into continuous rotary motion.",
+      "Performed analytical dynamic torque profiling and compared mechanical behavior with theoretical models.",
+      "Designed the complete CAD architecture and fabricated a working physical hardware prototype.",
+      "Developed Arduino-based embedded control logic with photoelectric position feedback.",
+      "Integrated solid-state switching for phase-locked electromagnetic actuation.",
+      "Tested empirical motion stability and torque output against analytical models."
+    ],
+    "method": "A photoelectric sensor measures mechanism position. Arduino control logic uses this feedback to coordinate solid-state switching of electromagnetic actuation. The slider-crank mechanism couples the resulting linear reciprocation to rotary output, connecting the mechanical dynamics model with the electronic control loop.",
+    "validation": "This was a real hardware project: CAD design, fabrication, electronics integration, microcontroller programming, and experimental testing. The résumé reports comparison of empirical motion stability and torque output against theory; numerical test results are not supplied.",
+    "media": "Actual prototype photographs, CAD assembly screenshots, control electronics / wiring, and measured motion or torque results.",
+    "source": null
+  },
+  {
+    "id": "optimization",
+    "category": "research",
+    "categoryLabel": "Optimization research / Algorithms",
+    "title": "Kanpur–Zoutendijk Solver",
+    "subtitle": "Constrained Nonlinear Optimization",
+    "date": "June 2024",
+    "datetime": "2024-06",
+    "organization": "Indian Institute of Technology Kanpur",
+    "summary": "Co-authored feasible-direction optimization research that reduces the LP subproblem to an active-constraint subspace and recovers infeasible starting points.",
+    "tags": [
+      "Nonlinear programming",
+      "Newton methods",
+      "KKT",
+      "Numerical optimization"
+    ],
+    "image": "optimization.svg",
+    "imageAlt": "Conceptual objective contours, a constraint boundary, and feasible search directions; not benchmark data",
+    "outcome": "Research-reported 2–3.1× runtime improvement on benchmarks",
+    "problem": "Solve constrained nonlinear optimization problems while reducing the cost of the feasible-direction subproblem and accommodating infeasible initial points and equality constraints.",
+    "pipeline": [
+      "Active constraints",
+      "Reduced LP",
+      "Feasible direction",
+      "Trust region",
+      "KKT evaluation"
+    ],
+    "contributions": [
+      "Co-authored a feasible-direction numerical solver for constrained nonlinear problems.",
+      "Reformulated the simplex LP subproblem from the n-dimensional state space into an m-dimensional active-constraint subspace, where m ≤ n.",
+      "Developed a Newton-step recovery routine for infeasible initial points.",
+      "Designed a shrinking trust-region strategy for equality constraints.",
+      "Evaluated non-convex benchmark problems spanning 2D–13D, including runtime and KKT convergence characteristics relative to classical Zoutendijk and evolutionary baselines."
+    ],
+    "method": "The method focuses the feasible-direction LP on the active-constraint subspace rather than the full state space. Newton steps address infeasible starts, while a shrinking trust region handles equality constraints. Benchmark methodology examines computational performance and KKT residual behavior across the tested non-convex problems.",
+    "validation": "The résumé reports 2–3.1× CPU runtime improvements on the evaluated benchmarks. This is a research-reported result, not a universal performance guarantee. The publication URL, complete benchmark tables, and citation metadata have not been independently verified and are not invented here.",
+    "media": "Verified publication or preprint, algorithm pseudocode, benchmark tables, and original convergence / runtime plots.",
+    "source": null
+  }
+]

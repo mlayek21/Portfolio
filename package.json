@@ -1,0 +1,16 @@
+{
+  "name": "monojit-layek-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Monojit Layek — Robotics Motion Planning Engineer",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "preview": "node scripts/serve.mjs --dist",
+    "lint": "node scripts/check.mjs",
+    "build": "node scripts/build.mjs"
+  }
+}
