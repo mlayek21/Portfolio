@@ -65,6 +65,8 @@ Keep the existing `mlayek` Netlify project connected to `https://github.com/mlay
 
 The production project uses GitHub as its source provider, a read-only deployment key, and a push webhook on `mlayek21/Portfolio`. Keep these account-level settings pointed at this repository when changing Netlify configuration. Deployment credentials and local `.netlify/` state are not committed.
 
+No Git submodules are required. The résumé is a regular tracked PDF in `assets/resume/`, so a fresh Netlify checkout does not depend on an external résumé repository.
+
 | Setting | Value |
 | --- | --- |
 | Base directory | Repository root (`.`) |
