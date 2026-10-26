@@ -4,7 +4,7 @@ A responsive portfolio focused on robotic motion planning, controls, mechatronic
 
 ## Local preview and checks
 
-Use Node.js 22 or newer. There are no dependencies to install.
+Use Node.js 22 (pinned in `.nvmrc` and `netlify.toml`). There are no runtime dependencies. `npm ci` verifies the committed lockfile for a clean setup.
 
 ```sh
 npm run dev
@@ -20,7 +20,7 @@ npm run preview
 
 `npm run lint` checks JavaScript syntax and imports, HTML structure, image alt attributes, navigation targets, local assets, and external URL syntax. It does not verify remote services or substitute for browser accessibility checks. There was no pre-existing automated test suite; no test framework was added.
 
-`npm run build` renders project cards from `content/projects.json`, publishes an allowlist of site files to `dist/`, checks the résumé is a PDF, and excludes old stock images, source tooling, Git metadata, and documentation. `npm run preview` serves that output. Both servers use port 5173; stop one before starting the other, or set a different `PORT`.
+`npm run build` first runs the validation checks, then renders project cards from `content/projects.json`, publishes an allowlist of site files to `dist/`, checks the résumé is a PDF, and excludes old stock images, source tooling, Git metadata, and documentation. `npm run preview` serves that output. Both servers use port 5173; stop one before starting the other, or set a different `PORT`.
 
 ## Redesign verification
 
@@ -61,7 +61,31 @@ The original page contained a client-side SMTP credential. It has been removed f
 
 ## Netlify
 
-Keep the existing Netlify site connected to this repository. The committed configuration uses `npm run build`, the `dist` publish directory, and Node.js 22. No environment variables are needed. After merging/pushing the changes, Netlify can deploy through its existing Git integration. This local implementation does not itself push or deploy.
+Keep the existing `mlayek` Netlify project connected to `https://github.com/mlayek21/Portfolio`, with production branch **main** and automatic publishing enabled. The root-level `netlify.toml` specifies:
+
+| Setting | Value |
+| --- | --- |
+| Base directory | Repository root (`.`) |
+| Package directory | Leave unset |
+| Build command | `npm run build` |
+| Publish directory | `dist` |
+| Node.js | `22` |
+
+The build validates the source before generating the deployable files. The lockfile supports clean installs; no application secrets, server functions, or framework adapters are required. Do not set `dist` as the base directory: Netlify generates it during the build.
+
+Pushing to the connected production branch triggers Netlify's Git deployment. If the latest commit is not deployed, check **Deploys** for a failed build, paused builds, or locked publishing. For a one-time recovery, retry the latest commit with a cleared build cache. Paste the first build error and surrounding log lines when diagnosing a failure; a successful local build alone does not prove that the hosted deployment succeeded.
+
+After deployment, verify `/`, `/style.css`, `/script.js`, and `/assets/resume/Monojit-Layek-Resume.pdf`; the homepage should contain **System Design Engineer**. Production HTML and assets are generated locally with `npm run build`, and can also be uploaded from `dist/` through the existing project's manual-deploy interface.
+
+### Accessibility plugin failures
+
+The existing Netlify project has the UI-installed `netlify-plugin-a11y` plugin. It is not an application dependency, and it remains enabled. Its published `0.0.12` package uses `resultMode` rather than the newer scoped plugin's `failWithIssues` input; those settings are not interchangeable.
+
+The build configuration keeps the publish directory at `dist`, so audits only inspect the generated site. Hero social-link arrows were lightened after the legacy pa11y/HTML_CodeSniffer runner reported three contrast findings. A local audit with the plugin's pa11y 5.3.1 runner then checks the built homepage with no findings; this does not verify Netlify's browser installation or account-level plugin configuration.
+
+If a hosted build still fails, the lines below the plugin name distinguish an accessibility finding from a browser launch or dependency failure. Keep the full error when troubleshooting. Adding `failWithIssues = false` to this older plugin is not a valid fix, and reporting-only settings cannot resolve a Chromium launch failure.
+
+These settings follow Netlify's [file-based configuration](https://docs.netlify.com/build/configure-builds/file-based-configuration/) and [build dependency documentation](https://docs.netlify.com/build/configure-builds/manage-dependencies/).
 
 Retain the existing `mlayek.netlify.app` domain. If it changes, update the canonical URL, social metadata, `robots.txt`, and `sitemap.xml` together. The site uses ordinary anchor navigation; no single-page-app fallback rewrite is necessary.
 

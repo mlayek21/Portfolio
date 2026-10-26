@@ -11,6 +11,7 @@
     "dev": "node scripts/serve.mjs",
     "preview": "node scripts/serve.mjs --dist",
     "lint": "node scripts/check.mjs",
+    "prebuild": "npm run lint",
     "build": "node scripts/build.mjs"
   }
 }
