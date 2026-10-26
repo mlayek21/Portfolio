@@ -63,6 +63,8 @@ The original page contained a client-side SMTP credential. It has been removed f
 
 Keep the existing `mlayek` Netlify project connected to `https://github.com/mlayek21/Portfolio`, with production branch **main** and automatic publishing enabled. The root-level `netlify.toml` specifies:
 
+The production project uses GitHub as its source provider, a read-only deployment key, and a push webhook on `mlayek21/Portfolio`. Keep these account-level settings pointed at this repository when changing Netlify configuration. Deployment credentials and local `.netlify/` state are not committed.
+
 | Setting | Value |
 | --- | --- |
 | Base directory | Repository root (`.`) |
@@ -79,11 +81,11 @@ After deployment, verify `/`, `/style.css`, `/script.js`, and `/assets/resume/Mo
 
 ### Accessibility plugin failures
 
-The existing Netlify project has the UI-installed `netlify-plugin-a11y` plugin. It is not an application dependency, and it remains enabled. Its published `0.0.12` package uses `resultMode` rather than the newer scoped plugin's `failWithIssues` input; those settings are not interchangeable.
+No Netlify Build Plugin is required for this portfolio. Leave the legacy UI-installed `netlify-plugin-a11y@0.0.12` disabled: it previously timed out after 30 seconds in `onPostBuild`, after the production build had already succeeded. Source validation still runs before every production build, and the browser accessibility checks described above remain part of the verification record.
 
 The build configuration keeps the publish directory at `dist`, so audits only inspect the generated site. Hero social-link arrows were lightened after the legacy pa11y/HTML_CodeSniffer runner reported three contrast findings. A local audit with the plugin's pa11y 5.3.1 runner then checks the built homepage with no findings; this does not verify Netlify's browser installation or account-level plugin configuration.
 
-If a hosted build still fails, the lines below the plugin name distinguish an accessibility finding from a browser launch or dependency failure. Keep the full error when troubleshooting. Adding `failWithIssues = false` to this older plugin is not a valid fix, and reporting-only settings cannot resolve a Chromium launch failure.
+If that plugin is re-enabled, its published `0.0.12` package uses `resultMode`, not the newer scoped plugin's `failWithIssues` input. Neither reporting-only settings nor suppressing accessibility findings fixes a runner timeout. Disable the plugin in Netlify's project settings if this legacy timeout returns.
 
 These settings follow Netlify's [file-based configuration](https://docs.netlify.com/build/configure-builds/file-based-configuration/) and [build dependency documentation](https://docs.netlify.com/build/configure-builds/manage-dependencies/).
 
