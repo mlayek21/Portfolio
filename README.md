@@ -95,7 +95,7 @@ Retain the existing `mlayek.netlify.app` domain. If it changes, update the canon
 
 ## Content and media provenance
 
-Professional facts and dates come from the supplied `MonojitLayekResume.pdf`, which is copied verbatim for downloading. AeThrone's role title is **System Design Engineer**, per the portfolio owner's correction. The supplied résumé PDF retains its original wording. Research and personal projects are separate from full-time employment.
+Professional facts and dates come from the latest supplied `MonojitLayekResume.pdf`, which is copied verbatim for downloading. It lists AeThrone's role as **System Design Engineer**, March–August 2023, and the B.Tech graduation date as June 2018. The website reflects those dates. Research and personal projects are separate from full-time employment.
 
 The **2–3.1× runtime improvement** is a résumé-reported result for the research benchmarks, not a general performance guarantee. Schematics are illustrative and are not simulation screenshots, fabricated experimental results, or photographs of completed hardware.
 

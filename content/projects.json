@@ -39,7 +39,7 @@
     "categoryLabel": "Parallel robotics / Stabilization",
     "title": "6-DOF Stewart Platform",
     "subtitle": "Ship-Mounted Drone Landing",
-    "date": "March 2023 – June 2024",
+    "date": "March 2023 – August 2023",
     "datetime": "2023-03",
     "organization": "AeThrone Aerospace · Pune, India",
     "summary": "A parallel robotic landing platform designed to compensate for vessel motion, combining mechanical design, kinematic modeling, and simulation.",
