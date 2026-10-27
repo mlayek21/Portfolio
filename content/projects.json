@@ -30,8 +30,279 @@
     ],
     "method": "The robot description provides the link and joint structure for kinematic modeling. The inverse-kinematics solver maps end-effector targets into joint configurations. Collision-aware planning connects configurations, followed by interpolation and velocity profiling to produce the motion reference evaluated in simulation.",
     "validation": "Evaluation was performed in Gazebo and PyBullet simulations. No real-robot deployment, success-rate metric, or timing guarantee is claimed. Trapezoidal and quintic profiles are described separately without assuming all generated motion is jerk-free.",
-    "media": "RViz / Gazebo screenshots, PyBullet pick-and-place captures, and joint-position / velocity trajectory plots.",
-    "source": null
+    "resources": {
+      "github": null,
+      "drive": [],
+      "downloads": [
+        {
+          "path": "/assets/Dobot_gzwp/README.md",
+          "label": "Dobot setup and architecture guide"
+        }
+      ],
+      "videos": [
+        {
+          "kind": "local",
+          "path": "/assets/Dobot_gzwp/Screen Recording 2026-10-10 at 10.51.24 PM.mov",
+          "type": "video/quicktime",
+          "label": "Dobot screen recording 1"
+        },
+        {
+          "kind": "local",
+          "path": "/assets/Dobot_gzwp/Screen Recording 2026-10-10 at 7.11.45 AM.mov",
+          "type": "video/quicktime",
+          "label": "Dobot screen recording 2"
+        }
+      ],
+      "images": [],
+      "fileGroups": [
+        {
+          "label": "Robot source, configuration and models",
+          "files": [
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_description/CMakeLists.txt",
+              "label": "CMakeLists.txt"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_description/launch/display.launch.py",
+              "label": "display.launch.py"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_description/meshes/Link1.STL",
+              "label": "Link1.STL"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_description/meshes/Link2.STL",
+              "label": "Link2.STL"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_description/meshes/Link3.STL",
+              "label": "Link3.STL"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_description/meshes/Link4.STL",
+              "label": "Link4.STL"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_description/meshes/Link5.STL",
+              "label": "Link5.STL"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_description/meshes/Link6.STL",
+              "label": "Link6.STL"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_description/meshes/base_link.STL",
+              "label": "base_link.STL"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_description/package.xml",
+              "label": "package.xml"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_description/rviz/dobot.rviz",
+              "label": "dobot.rviz"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_description/urdf/nova5.urdf",
+              "label": "nova5.urdf"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/CMakeLists.txt",
+              "label": "CMakeLists.txt"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/cartesian_path.hpp",
+              "label": "cartesian_path.hpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/executive_engine.hpp",
+              "label": "executive_engine.hpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/experiment_runner.hpp",
+              "label": "experiment_runner.hpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/experiment_task.hpp",
+              "label": "experiment_task.hpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/gripper_controller.hpp",
+              "label": "gripper_controller.hpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/pick_and_place_context.hpp",
+              "label": "pick_and_place_context.hpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/task_state.hpp",
+              "label": "task_state.hpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/task_state_machine.hpp",
+              "label": "task_state_machine.hpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/telemetry_observer.hpp",
+              "label": "telemetry_observer.hpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/launch/executive.launch.py",
+              "label": "executive.launch.py"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/launch/experiment.launch.py",
+              "label": "experiment.launch.py"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/launch/pick_and_place.launch.py",
+              "label": "pick_and_place.launch.py"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/package.xml",
+              "label": "package.xml"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/src/dobot_executive_node.cpp",
+              "label": "dobot_executive_node.cpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/src/dobot_experiment_node.cpp",
+              "label": "dobot_experiment_node.cpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/src/dobot_pick_and_place_node.cpp",
+              "label": "dobot_pick_and_place_node.cpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/src/executive_engine.cpp",
+              "label": "executive_engine.cpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/src/task_state.cpp",
+              "label": "task_state.cpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_executive/src/task_state_machine.cpp",
+              "label": "task_state_machine.cpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_gazebo/CMakeLists.txt",
+              "label": "CMakeLists.txt"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_gazebo/config/dobot_controllers.yaml",
+              "label": "dobot_controllers.yaml"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_gazebo/launch/gazebo.launch.py",
+              "label": "gazebo.launch.py"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_gazebo/launch/sim.launch.py",
+              "label": "sim.launch.py"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_gazebo/package.xml",
+              "label": "package.xml"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_gazebo/src/dobot_sim_node.cpp",
+              "label": "dobot_sim_node.cpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_kinematics/CMakeLists.txt",
+              "label": "CMakeLists.txt"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_kinematics/include/dobot_kinematics/kinematics_engine.hpp",
+              "label": "kinematics_engine.hpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_kinematics/package.xml",
+              "label": "package.xml"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_kinematics/src/kinematics_engine.cpp",
+              "label": "kinematics_engine.cpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_kinematics/src/test_kinematics_node.cpp",
+              "label": "test_kinematics_node.cpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_motion_planning/CMakeLists.txt",
+              "label": "CMakeLists.txt"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_motion_planning/include/dobot_motion_planning/motion_planning_engine.hpp",
+              "label": "motion_planning_engine.hpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_motion_planning/package.xml",
+              "label": "package.xml"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_motion_planning/src/motion_planning_engine.cpp",
+              "label": "motion_planning_engine.cpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_motion_planning/src/test_planning_node.cpp",
+              "label": "test_planning_node.cpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_pybullet/dobot_pybullet/__init__.py",
+              "label": "__init__.py"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_pybullet/dobot_pybullet/dobot_pybullet_node.py",
+              "label": "dobot_pybullet_node.py"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_pybullet/launch/dobot_pybullet.launch.py",
+              "label": "dobot_pybullet.launch.py"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_pybullet/package.xml",
+              "label": "package.xml"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_pybullet/resource/dobot_pybullet",
+              "label": "dobot_pybullet"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_pybullet/setup.cfg",
+              "label": "setup.cfg"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_pybullet/setup.py",
+              "label": "setup.py"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_trajectory/CMakeLists.txt",
+              "label": "CMakeLists.txt"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_trajectory/include/dobot_trajectory/trajectory_planning_engine.hpp",
+              "label": "trajectory_planning_engine.hpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_trajectory/package.xml",
+              "label": "package.xml"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_trajectory/src/test_trajectory_node.cpp",
+              "label": "test_trajectory_node.cpp"
+            },
+            {
+              "path": "/assets/Dobot_gzwp/src/dobot_trajectory/src/trajectory_planning_engine.cpp",
+              "label": "trajectory_planning_engine.cpp"
+            }
+          ]
+        }
+      ],
+      "githubNeedsUrl": "The existing Dobot repository is private. A publicly accessible repository URL is needed."
+    }
   },
   {
     "id": "stewart",
@@ -64,8 +335,370 @@
     ],
     "method": "The parallel mechanism links a fixed base to a moving platform through six struts. Kinematic modeling relates the desired platform pose to the strut configurations, while CAD and URDF descriptions carry the mechanism into simulation. Dynamic analysis complements the pose model when examining stabilization behavior.",
     "validation": "The résumé documents simulation-based evaluation in ROS / PyBullet. The verified public repository contains CAD, URDF, inverse-kinematics code, and PyBullet simulation. Commercial deployment, drone landing trials, and shipboard testing are not claimed.",
-    "media": "Original CAD assembly views, a PyBullet motion-compensation recording, and platform-pose response plots.",
-    "source": "https://github.com/mlayek21/Stewart-Platform"
+    "resources": {
+      "github": "https://github.com/mlayek21/Stewart-Platform",
+      "drive": [],
+      "downloads": [
+        {
+          "path": "/assets/Stewart-Platform-main/Files/StewartPlatformDocument.pdf",
+          "label": "Stewart platform documentation"
+        },
+        {
+          "path": "/assets/Stewart-Platform-main/Stewart.zip",
+          "label": "Stewart robot model archive"
+        },
+        {
+          "path": "/assets/Stewart-Platform-main/Stewart_CAD.f3d",
+          "label": "Fusion 360 CAD assembly"
+        },
+        {
+          "path": "/assets/Stewart-Platform-main/Files/analysis.ipynb",
+          "label": "Kinematics analysis notebook"
+        },
+        {
+          "path": "/assets/Stewart-Platform-main/README.md",
+          "label": "Stewart project guide"
+        }
+      ],
+      "videos": [
+        {
+          "kind": "local",
+          "path": "/assets/Stewart-Platform-main/Simulation/Full_simulation.mp4",
+          "type": "video/mp4",
+          "label": "Full platform simulation"
+        },
+        {
+          "kind": "local",
+          "path": "/assets/Stewart-Platform-main/Simulation/simulation1.mp4",
+          "type": "video/mp4",
+          "label": "Simulation 1 — RPR motion"
+        },
+        {
+          "kind": "local",
+          "path": "/assets/Stewart-Platform-main/Simulation/simulation2.mp4",
+          "type": "video/mp4",
+          "label": "Simulation 2 — return-to-home sequence"
+        },
+        {
+          "kind": "local",
+          "path": "/assets/Stewart-Platform-main/Simulation/simulation3.mp4",
+          "type": "video/mp4",
+          "label": "Simulation 3 — spiral trajectory"
+        },
+        {
+          "kind": "youtube",
+          "url": "https://www.youtube.com/watch?v=Fk0oGJxcMWg",
+          "label": "Stewart platform — full demonstration"
+        }
+      ],
+      "images": [
+        {
+          "path": "/assets/Stewart-Platform-main/Files/Stewart1 v2.png",
+          "label": "Stewart1 v2.png",
+          "alt": "Stewart platform CAD assembly"
+        },
+        {
+          "path": "/assets/Stewart-Platform-main/Files/URDF_LINK.png",
+          "label": "URDF_LINK.png",
+          "alt": "Stewart platform URDF link arrangement"
+        },
+        {
+          "path": "/assets/Stewart-Platform-main/Files/output1.png",
+          "label": "output1.png",
+          "alt": "Stewart platform kinematics plot output1"
+        },
+        {
+          "path": "/assets/Stewart-Platform-main/Files/output2.png",
+          "label": "output2.png",
+          "alt": "Stewart platform kinematics plot output2"
+        },
+        {
+          "path": "/assets/Stewart-Platform-main/Files/output3.png",
+          "label": "output3.png",
+          "alt": "Stewart platform kinematics plot output3"
+        },
+        {
+          "path": "/assets/Stewart-Platform-main/Files/output4.png",
+          "label": "output4.png",
+          "alt": "Stewart platform kinematics plot output4"
+        },
+        {
+          "path": "/assets/Stewart-Platform-main/Files/output_1.png",
+          "label": "output_1.png",
+          "alt": "Stewart platform kinematics plot output_1"
+        },
+        {
+          "path": "/assets/Stewart-Platform-main/Files/output_2.png",
+          "label": "output_2.png",
+          "alt": "Stewart platform kinematics plot output_2"
+        },
+        {
+          "path": "/assets/Stewart-Platform-main/Files/output_3.png",
+          "label": "output_3.png",
+          "alt": "Stewart platform kinematics plot output_3"
+        }
+      ],
+      "fileGroups": [
+        {
+          "label": "Simulation source and supporting files",
+          "files": [
+            {
+              "path": "/assets/Stewart-Platform-main/StewartPlatform.py",
+              "label": "StewartPlatform.py"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/__init__.py",
+              "label": "__init__.py"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/draw_3d_spiral.py",
+              "label": "draw_3d_spiral.py"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/generate_elliptical_points.py",
+              "label": "generate_elliptical_points.py"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/inv_kinematics.py",
+              "label": "inv_kinematics.py"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/main.py",
+              "label": "main.py"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/requirements.txt",
+              "label": "requirements.txt"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/LICENSE",
+              "label": "LICENSE"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Link_graph.txt",
+              "label": "Link_graph.txt"
+            }
+          ]
+        },
+        {
+          "label": "URDF and mesh files",
+          "files": [
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/Stewart.urdf",
+              "label": "Stewart.urdf"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/hello_bullet.py",
+              "label": "hello_bullet.py"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/J1B_1.stl",
+              "label": "J1B_1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/J1T1.stl",
+              "label": "J1T1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/J2B1.stl",
+              "label": "J2B1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/J2T1.stl",
+              "label": "J2T1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/J3B1.stl",
+              "label": "J3B1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/J3T_1.stl",
+              "label": "J3T_1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/J4B1.stl",
+              "label": "J4B1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/J4T1.stl",
+              "label": "J4T1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/J5B1.stl",
+              "label": "J5B1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/J5T_1.stl",
+              "label": "J5T_1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/J6B1.stl",
+              "label": "J6B1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/J6T1.stl",
+              "label": "J6T1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/TOP1.stl",
+              "label": "TOP1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/UJ11.stl",
+              "label": "UJ11.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/UJ21.stl",
+              "label": "UJ21.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/UJ31.stl",
+              "label": "UJ31.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/UJ41.stl",
+              "label": "UJ41.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/UJ51.stl",
+              "label": "UJ51.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/UJ61.stl",
+              "label": "UJ61.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/X1bottom1.stl",
+              "label": "X1bottom1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/X1top1.stl",
+              "label": "X1top1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/X2bottom1.stl",
+              "label": "X2bottom1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/X2top1.stl",
+              "label": "X2top1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/X3bottom1.stl",
+              "label": "X3bottom1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/X3top1.stl",
+              "label": "X3top1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/X4bottom1.stl",
+              "label": "X4bottom1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/X4top1.stl",
+              "label": "X4top1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/X5bottom1.stl",
+              "label": "X5bottom1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/X5top1.stl",
+              "label": "X5top1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/X6bottom1.stl",
+              "label": "X6bottom1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/X6top1.stl",
+              "label": "X6top1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/base_link.stl",
+              "label": "base_link.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/cylinder11.stl",
+              "label": "cylinder11.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/cylinder21.stl",
+              "label": "cylinder21.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/cylinder31.stl",
+              "label": "cylinder31.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/cylinder41.stl",
+              "label": "cylinder41.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/cylinder51.stl",
+              "label": "cylinder51.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/cylinder61.stl",
+              "label": "cylinder61.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/indicator1.stl",
+              "label": "indicator1.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/piston11.stl",
+              "label": "piston11.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/piston21.stl",
+              "label": "piston21.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/piston31.stl",
+              "label": "piston31.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/piston41.stl",
+              "label": "piston41.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/piston51.stl",
+              "label": "piston51.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/piston61.stl",
+              "label": "piston61.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/rod11.stl",
+              "label": "rod11.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/rod21.stl",
+              "label": "rod21.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/rod31.stl",
+              "label": "rod31.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/rod41.stl",
+              "label": "rod41.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/rod51.stl",
+              "label": "rod51.stl"
+            },
+            {
+              "path": "/assets/Stewart-Platform-main/Stewart/meshes/rod61.stl",
+              "label": "rod61.stl"
+            }
+          ]
+        }
+      ]
+    }
   },
   {
     "id": "actuator",
@@ -99,8 +732,66 @@
     ],
     "method": "A photoelectric sensor measures mechanism position. Arduino control logic uses this feedback to coordinate solid-state switching of electromagnetic actuation. The slider-crank mechanism couples the resulting linear reciprocation to rotary output, connecting the mechanical dynamics model with the electronic control loop.",
     "validation": "This was a real hardware project: CAD design, fabrication, electronics integration, microcontroller programming, and experimental testing. The résumé reports comparison of empirical motion stability and torque output against theory; numerical test results are not supplied.",
-    "media": "Actual prototype photographs, CAD assembly screenshots, control electronics / wiring, and measured motion or torque results.",
-    "source": null
+    "resources": {
+      "github": null,
+      "drive": [
+        {
+          "label": "View on Google Drive",
+          "url": "https://drive.google.com/drive/folders/0B8mi-UIPyFnQMjFPVi15czdRMWM?resourcekey=0-Eh_bgKei0EmU-U8omZkVig&usp=drive_link"
+        },
+        {
+          "label": "CAD files on Google Drive",
+          "url": "https://drive.google.com/drive/folders/1kT-SygJnn5RaKKRg4QQ6IUS3Fce4iKiz"
+        },
+        {
+          "label": "Inventor files on Google Drive",
+          "url": "https://drive.google.com/drive/folders/1dZmqpIdaxMV-rEEg8Qq4StCnh4kudOGu"
+        }
+      ],
+      "downloads": [],
+      "videos": [
+        {
+          "kind": "drive",
+          "url": "https://drive.google.com/file/d/0B8mi-UIPyFnQVzdNNGFrZzFnVFk/view?resourcekey=0-yg_qJXtH0NKjRQZzcSTLfg",
+          "label": "MRE prototype — EMR in action",
+          "note": "Original AVI recording · 1.17 GB. Google Drive handles playback and download confirmation."
+        }
+      ],
+      "images": [],
+      "fileGroups": [],
+      "hostedFiles": [
+        {
+          "filename": "ELECTROMAGNETIC RECIPROCATING ENGINE..docx",
+          "label": "ELECTROMAGNETIC RECIPROCATING ENGINE..docx",
+          "url": "https://drive.google.com/file/d/1e74z5h8MeFiHWFpzUNbdPHKdJbfrGYc4/view",
+          "downloadUrl": "https://drive.google.com/uc?export=download&id=1e74z5h8MeFiHWFpzUNbdPHKdJbfrGYc4"
+        },
+        {
+          "filename": "final design-Temp0000.png",
+          "label": "final design-Temp0000.png",
+          "url": "https://drive.google.com/file/d/0B8mi-UIPyFnQc05iVE1jdmxvNEpldEpHYVdkMzI2Q0R5MUE4/view?resourcekey=0-gJns5dw983z9BJ3DYryt3Q",
+          "downloadUrl": "https://drive.google.com/uc?export=download&id=0B8mi-UIPyFnQc05iVE1jdmxvNEpldEpHYVdkMzI2Q0R5MUE4&resourcekey=0-gJns5dw983z9BJ3DYryt3Q"
+        },
+        {
+          "filename": "IMG_20180515_125110.jpg",
+          "label": "IMG_20180515_125110.jpg",
+          "url": "https://drive.google.com/file/d/1Y2aZBY-Z1bdswPz9EPP8CG8qSxyKepZ-/view",
+          "downloadUrl": "https://drive.google.com/uc?export=download&id=1Y2aZBY-Z1bdswPz9EPP8CG8qSxyKepZ-"
+        },
+        {
+          "filename": "KALYANI GOVT MRE.pptx",
+          "label": "KALYANI GOVT MRE.pptx",
+          "url": "https://drive.google.com/file/d/0B8mi-UIPyFnQZXUyWVh3VjBUTGpKSWJFR2ZqUVZBN0hINVRJ/view?resourcekey=0-gyZkXa-qHztnOSae6ZL0Lg",
+          "downloadUrl": "https://drive.google.com/uc?export=download&id=0B8mi-UIPyFnQZXUyWVh3VjBUTGpKSWJFR2ZqUVZBN0hINVRJ&resourcekey=0-gyZkXa-qHztnOSae6ZL0Lg"
+        },
+        {
+          "filename": "tachometer-using-arduino.ino",
+          "label": "tachometer-using-arduino.ino",
+          "url": "https://drive.google.com/file/d/1gOA0FxcN5KIUWTmwTuFLLnsI1wxh43FN/view",
+          "downloadUrl": "https://drive.google.com/uc?export=download&id=1gOA0FxcN5KIUWTmwTuFLLnsI1wxh43FN"
+        }
+      ]
+    }
   },
   {
     "id": "optimization",
@@ -137,8 +828,19 @@
       "Evaluated non-convex benchmark problems spanning 2D–13D, including runtime and KKT convergence characteristics relative to classical Zoutendijk and evolutionary baselines."
     ],
     "method": "The method focuses the feasible-direction LP on the active-constraint subspace rather than the full state space. Newton steps address infeasible starts, while a shrinking trust region handles equality constraints. Benchmark methodology examines computational performance and KKT residual behavior across the tested non-convex problems.",
-    "validation": "The résumé reports 2–3.1× CPU runtime improvements on the evaluated benchmarks. This is a research-reported result, not a universal performance guarantee. The publication URL, complete benchmark tables, and citation metadata have not been independently verified and are not invented here.",
-    "media": "Verified publication or preprint, algorithm pseudocode, benchmark tables, and original convergence / runtime plots.",
-    "source": null
+    "validation": "The résumé reports 2–3.1× CPU runtime improvements on the evaluated benchmarks. This is a research-reported result, not a universal performance guarantee. The supplied research PDF is available below; a publisher URL or DOI has not been supplied.",
+    "resources": {
+      "github": null,
+      "drive": [],
+      "downloads": [
+        {
+          "path": "/assets/kzountendijk/Kanpur_zoutendijk.pdf",
+          "label": "Kanpur–Zoutendijk research document"
+        }
+      ],
+      "videos": [],
+      "images": [],
+      "fileGroups": []
+    }
   }
 ]

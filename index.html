@@ -240,493 +240,122 @@
           </div>
           <div class="project-grid">
             <!-- PROJECTS:start -->
-            <article
-              class="project-card"
-              id="project-dobot"
-              data-category="motion robotics"
-              aria-labelledby="title-dobot"
-            >
-              <figure class="project-figure">
-                <img
-                  src="/assets/diagrams/manipulator.svg"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Conceptual robot manipulator and end-effector path, not a simulation capture"
-                /><span class="project-number" aria-hidden="true"
-                  >PROJECT / 01</span
-                >
-                <figcaption>CONCEPTUAL SCHEMATIC</figcaption>
-              </figure>
-              <div class="project-body">
-                <div class="project-meta">
-                  <span>Robotics software / Motion planning</span
-                  ><time datetime="2022-10">October 2022</time>
-                </div>
-                <h3 id="title-dobot">6-Axis Dobot Manipulator</h3>
-                <p class="project-subtitle">Motion Planning Stack</p>
-                <p class="project-description">
-                  A C++ / ROS 2 motion-planning stack connecting numerical
-                  inverse kinematics, trajectory generation, and collision-aware
-                  pick-and-place planning.
-                </p>
-                <ul class="tags" aria-label="Technologies">
-                  <li>C++</li>
-                  <li>ROS 2 Humble</li>
-                  <li>MoveIt 2</li>
-                  <li>Gazebo</li>
-                  <li>PyBullet</li>
-                </ul>
-                <p class="project-outcome">
-                  From robot description to simulation-validated motion
-                </p>
-                <details class="project-details">
-                  <summary>
-                    Explore case study<span class="sr-only"
-                      >: 6-Axis Dobot Manipulator</span
-                    >
-                  </summary>
-                  <div class="case-study">
-                    <p class="case-organization">Personal project</p>
-                    <h4>Engineering problem</h4>
-                    <p>
-                      Plan and execute collision-aware motion for a six-axis
-                      manipulator, while handling inverse-kinematics sensitivity
-                      near singular configurations and generating controlled
-                      motion between targets.
-                    </p>
-                    <h4>Architecture &amp; approach</h4>
-                    <ol class="pipeline" aria-label="Engineering pipeline">
-                      <li>Robot description</li>
-                      <li>Kinematics / IK</li>
-                      <li>Path planning</li>
-                      <li>Time profiling</li>
-                      <li>Simulation</li>
-                    </ol>
-                    <p>
-                      The robot description provides the link and joint
-                      structure for kinematic modeling. The inverse-kinematics
-                      solver maps end-effector targets into joint
-                      configurations. Collision-aware planning connects
-                      configurations, followed by interpolation and velocity
-                      profiling to produce the motion reference evaluated in
-                      simulation.
-                    </p>
-                    <h4>Technical contributions</h4>
-                    <ul class="contribution-list">
-                      <li>
-                        Developed a full ROS 2 Humble motion-planning stack in
-                        C++ for a six-axis manipulator.
-                      </li>
-                      <li>
-                        Implemented numerical inverse kinematics using Damped
-                        Least Squares, a geometric Jacobian, and a
-                        singularity-robust pseudoinverse.
-                      </li>
-                      <li>
-                        Developed cubic-spline trajectory interpolation with
-                        trapezoidal and quintic-polynomial velocity profiles.
-                      </li>
-                      <li>
-                        Integrated RRT/RRT* and MoveIt 2 for collision-aware
-                        planning within a pick-and-place pipeline.
-                      </li>
-                      <li>
-                        Validated robotic motion in both Gazebo and PyBullet.
-                      </li>
-                    </ul>
-                    <h4>Evaluation &amp; scope</h4>
-                    <p>
-                      Evaluation was performed in Gazebo and PyBullet
-                      simulations. No real-robot deployment, success-rate
-                      metric, or timing guarantee is claimed. Trapezoidal and
-                      quintic profiles are described separately without assuming
-                      all generated motion is jerk-free.
-                    </p>
+        <article class="project-card" id="project-dobot" data-category="motion robotics" aria-labelledby="title-dobot">
+          <figure class="project-figure"><img src="/assets/diagrams/manipulator.svg" width="640" height="360" loading="lazy" decoding="async" alt="Conceptual robot manipulator and end-effector path, not a simulation capture"><span class="project-number" aria-hidden="true">PROJECT / 01</span><figcaption>CONCEPTUAL SCHEMATIC</figcaption></figure>
+          <div class="project-body">
+            <div class="project-meta"><span>Robotics software / Motion planning</span><time datetime="2022-10">October 2022</time></div>
+            <h3 id="title-dobot">6-Axis Dobot Manipulator</h3>
+            <p class="project-subtitle">Motion Planning Stack</p>
+            <p class="project-description">A C++ / ROS 2 motion-planning stack connecting numerical inverse kinematics, trajectory generation, and collision-aware pick-and-place planning.</p>
+            <ul class="tags" aria-label="Technologies"><li>C++</li><li>ROS 2 Humble</li><li>MoveIt 2</li><li>Gazebo</li><li>PyBullet</li></ul>
+            <p class="project-outcome">From robot description to simulation-validated motion</p>
+            <details class="project-details"><summary aria-controls="case-dobot"><span class="expand-label">Expand Project</span><span class="collapse-label">Collapse Project</span><span class="sr-only">: 6-Axis Dobot Manipulator</span></summary><div class="case-study" id="case-dobot">
+              <section class="project-resources" aria-labelledby="resources-dobot"><h4 id="resources-dobot">Project resources<span class="sr-only">: 6-Axis Dobot Manipulator</span></h4>
 
-                    <div class="media-placeholder">
-                      <strong>ORIGINAL PROJECT MEDIA / TO BE ADDED</strong>RViz
-                      / Gazebo screenshots, PyBullet pick-and-place captures,
-                      and joint-position / velocity trajectory plots.
-                    </div>
-                  </div>
-                </details>
-              </div>
-            </article>
-            <article
-              class="project-card"
-              id="project-stewart"
-              data-category="robotics controls"
-              aria-labelledby="title-stewart"
-            >
-              <figure class="project-figure">
-                <img
-                  src="/assets/diagrams/stewart.svg"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Conceptual Stewart platform with six connecting struts and motion axes"
-                /><span class="project-number" aria-hidden="true"
-                  >PROJECT / 02</span
-                >
-                <figcaption>CONCEPTUAL SCHEMATIC</figcaption>
-              </figure>
-              <div class="project-body">
-                <div class="project-meta">
-                  <span>Parallel robotics / Stabilization</span
-                  ><time datetime="2023-03">March 2023 – August 2023</time>
-                </div>
-                <h3 id="title-stewart">6-DOF Stewart Platform</h3>
-                <p class="project-subtitle">Ship-Mounted Drone Landing</p>
-                <p class="project-description">
-                  A parallel robotic landing platform designed to compensate for
-                  vessel motion, combining mechanical design, kinematic
-                  modeling, and simulation.
-                </p>
-                <ul class="tags" aria-label="Technologies">
-                  <li>CAD</li>
-                  <li>URDF</li>
-                  <li>ROS</li>
-                  <li>PyBullet</li>
-                  <li>Kinematics</li>
-                </ul>
-                <p class="project-outcome">
-                  Six degrees of freedom. One stabilization problem.
-                </p>
-                <details class="project-details">
-                  <summary>
-                    Explore case study<span class="sr-only"
-                      >: 6-DOF Stewart Platform</span
-                    >
-                  </summary>
-                  <div class="case-study">
-                    <p class="case-organization">
-                      AeThrone Aerospace · Pune, India
-                    </p>
-                    <h4>Engineering problem</h4>
-                    <p>
-                      A ship-mounted drone landing surface must account for
-                      changing vessel orientation. The engineering problem was
-                      to model a six-DOF parallel platform capable of
-                      compensating for pitch, roll, and yaw disturbances.
-                    </p>
-                    <h4>Architecture &amp; approach</h4>
-                    <ol class="pipeline" aria-label="Engineering pipeline">
-                      <li>Mechanical CAD</li>
-                      <li>URDF model</li>
-                      <li>FK / IK</li>
-                      <li>Dynamics</li>
-                      <li>ROS / PyBullet</li>
-                    </ol>
-                    <p>
-                      The parallel mechanism links a fixed base to a moving
-                      platform through six struts. Kinematic modeling relates
-                      the desired platform pose to the strut configurations,
-                      while CAD and URDF descriptions carry the mechanism into
-                      simulation. Dynamic analysis complements the pose model
-                      when examining stabilization behavior.
-                    </p>
-                    <h4>Technical contributions</h4>
-                    <ul class="contribution-list">
-                      <li>
-                        Designed the mechanical architecture of a
-                        six-degree-of-freedom Stewart platform.
-                      </li>
-                      <li>
-                        Created detailed CAD geometry and a URDF description for
-                        robotic modeling and simulation.
-                      </li>
-                      <li>
-                        Developed forward and inverse kinematic models linking
-                        platform pose and leg configuration.
-                      </li>
-                      <li>
-                        Performed dynamic analysis and integrated robotic
-                        software using ROS and PyBullet.
-                      </li>
-                      <li>
-                        Evaluated platform motion and stabilization behavior
-                        against pitch, roll, and yaw disturbances in simulation.
-                      </li>
-                    </ul>
-                    <h4>Evaluation &amp; scope</h4>
-                    <p>
-                      The résumé documents simulation-based evaluation in ROS /
-                      PyBullet. The verified public repository contains CAD,
-                      URDF, inverse-kinematics code, and PyBullet simulation.
-                      Commercial deployment, drone landing trials, and shipboard
-                      testing are not claimed.
-                    </p>
-                    <a
-                      class="text-link"
-                      href="https://github.com/mlayek21/Stewart-Platform"
-                      target="_blank"
-                      rel="noopener"
-                      >View project on GitHub
-                      <span aria-hidden="true">↗</span></a
-                    >
-                    <div class="media-placeholder">
-                      <strong>ORIGINAL PROJECT MEDIA / TO BE ADDED</strong
-                      >Original CAD assembly views, a PyBullet
-                      motion-compensation recording, and platform-pose response
-                      plots.
-                    </div>
-                  </div>
-                </details>
-              </div>
-            </article>
-            <article
-              class="project-card"
-              id="project-actuator"
-              data-category="controls"
-              aria-labelledby="title-actuator"
-            >
-              <figure class="project-figure">
-                <img
-                  src="/assets/diagrams/actuator.svg"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Conceptual magnetic actuator, slider-crank mechanism, and closed-loop feedback path"
-                /><span class="project-number" aria-hidden="true"
-                  >PROJECT / 03</span
-                >
-                <figcaption>CONCEPTUAL SCHEMATIC</figcaption>
-              </figure>
-              <div class="project-body">
-                <div class="project-meta">
-                  <span>Mechatronics / Hardware prototype</span
-                  ><time datetime="2019-07">July 2019</time>
-                </div>
-                <h3 id="title-actuator">Magnetic Reciprocating Actuator</h3>
-                <p class="project-subtitle">
-                  Mechatronic Design &amp; Closed-Loop Control
-                </p>
-                <p class="project-description">
-                  A designed, fabricated, and tested electromagnetic actuator
-                  with Arduino control, position feedback, and a slider-crank
-                  mechanism for rotary output.
-                </p>
-                <ul class="tags" aria-label="Technologies">
-                  <li>CAD</li>
-                  <li>Arduino</li>
-                  <li>Embedded control</li>
-                  <li>Sensors</li>
-                  <li>Dynamics</li>
-                </ul>
-                <p class="project-outcome">
-                  Physical fabrication, electronics, and closed-loop testing
-                </p>
-                <details class="project-details">
-                  <summary>
-                    Explore case study<span class="sr-only"
-                      >: Magnetic Reciprocating Actuator</span
-                    >
-                  </summary>
-                  <div class="case-study">
-                    <p class="case-organization">
-                      Kalyani Government Engineering College
-                    </p>
-                    <h4>Engineering problem</h4>
-                    <p>
-                      Convert electromagnetically driven reciprocating motion
-                      into continuous rotary output, and coordinate actuation
-                      with mechanism position using a closed-loop
-                      microcontroller system.
-                    </p>
-                    <h4>Architecture &amp; approach</h4>
-                    <ol class="pipeline" aria-label="Engineering pipeline">
-                      <li>Analytical model</li>
-                      <li>CAD design</li>
-                      <li>Fabrication</li>
-                      <li>Arduino control</li>
-                      <li>Prototype testing</li>
-                    </ol>
-                    <p>
-                      A photoelectric sensor measures mechanism position.
-                      Arduino control logic uses this feedback to coordinate
-                      solid-state switching of electromagnetic actuation. The
-                      slider-crank mechanism couples the resulting linear
-                      reciprocation to rotary output, connecting the mechanical
-                      dynamics model with the electronic control loop.
-                    </p>
-                    <h4>Technical contributions</h4>
-                    <ul class="contribution-list">
-                      <li>
-                        Modeled a constrained slider-crank mechanism and
-                        analyzed conversion of linear reciprocation into
-                        continuous rotary motion.
-                      </li>
-                      <li>
-                        Performed analytical dynamic torque profiling and
-                        compared mechanical behavior with theoretical models.
-                      </li>
-                      <li>
-                        Designed the complete CAD architecture and fabricated a
-                        working physical hardware prototype.
-                      </li>
-                      <li>
-                        Developed Arduino-based embedded control logic with
-                        photoelectric position feedback.
-                      </li>
-                      <li>
-                        Integrated solid-state switching for phase-locked
-                        electromagnetic actuation.
-                      </li>
-                      <li>
-                        Tested empirical motion stability and torque output
-                        against analytical models.
-                      </li>
-                    </ul>
-                    <h4>Evaluation &amp; scope</h4>
-                    <p>
-                      This was a real hardware project: CAD design, fabrication,
-                      electronics integration, microcontroller programming, and
-                      experimental testing. The résumé reports comparison of
-                      empirical motion stability and torque output against
-                      theory; numerical test results are not supplied.
-                    </p>
+    <h5>Documents &amp; downloads</h5><ul class="resource-files"><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Dobot setup and architecture guide</strong><span class="file-meta">README.md · MD</span></div><a class="resource-download" href="/assets/Dobot_gzwp/README.md" download aria-label="Download README.md">Download</a></li></ul>
 
-                    <div class="media-placeholder">
-                      <strong>ORIGINAL PROJECT MEDIA / TO BE ADDED</strong
-                      >Actual prototype photographs, CAD assembly screenshots,
-                      control electronics / wiring, and measured motion or
-                      torque results.
-                    </div>
-                  </div>
-                </details>
-              </div>
-            </article>
-            <article
-              class="project-card"
-              id="project-optimization"
-              data-category="research"
-              aria-labelledby="title-optimization"
-            >
-              <figure class="project-figure">
-                <img
-                  src="/assets/diagrams/optimization.svg"
-                  width="640"
-                  height="360"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Conceptual objective contours, a constraint boundary, and feasible search directions; not benchmark data"
-                /><span class="project-number" aria-hidden="true"
-                  >PROJECT / 04</span
-                >
-                <figcaption>CONCEPTUAL SCHEMATIC</figcaption>
-              </figure>
-              <div class="project-body">
-                <div class="project-meta">
-                  <span>Optimization research / Algorithms</span
-                  ><time datetime="2024-06">June 2024</time>
-                </div>
-                <h3 id="title-optimization">Kanpur–Zoutendijk Solver</h3>
-                <p class="project-subtitle">
-                  Constrained Nonlinear Optimization
-                </p>
-                <p class="project-description">
-                  Co-authored feasible-direction optimization research that
-                  reduces the LP subproblem to an active-constraint subspace and
-                  recovers infeasible starting points.
-                </p>
-                <ul class="tags" aria-label="Technologies">
-                  <li>Nonlinear programming</li>
-                  <li>Newton methods</li>
-                  <li>KKT</li>
-                  <li>Numerical optimization</li>
-                </ul>
-                <p class="project-outcome">
-                  Research-reported 2–3.1× runtime improvement on benchmarks
-                </p>
-                <details class="project-details">
-                  <summary>
-                    Explore case study<span class="sr-only"
-                      >: Kanpur–Zoutendijk Solver</span
-                    >
-                  </summary>
-                  <div class="case-study">
-                    <p class="case-organization">
-                      Indian Institute of Technology Kanpur
-                    </p>
-                    <h4>Engineering problem</h4>
-                    <p>
-                      Solve constrained nonlinear optimization problems while
-                      reducing the cost of the feasible-direction subproblem and
-                      accommodating infeasible initial points and equality
-                      constraints.
-                    </p>
-                    <h4>Architecture &amp; approach</h4>
-                    <ol class="pipeline" aria-label="Engineering pipeline">
-                      <li>Active constraints</li>
-                      <li>Reduced LP</li>
-                      <li>Feasible direction</li>
-                      <li>Trust region</li>
-                      <li>KKT evaluation</li>
-                    </ol>
-                    <p>
-                      The method focuses the feasible-direction LP on the
-                      active-constraint subspace rather than the full state
-                      space. Newton steps address infeasible starts, while a
-                      shrinking trust region handles equality constraints.
-                      Benchmark methodology examines computational performance
-                      and KKT residual behavior across the tested non-convex
-                      problems.
-                    </p>
-                    <h4>Technical contributions</h4>
-                    <ul class="contribution-list">
-                      <li>
-                        Co-authored a feasible-direction numerical solver for
-                        constrained nonlinear problems.
-                      </li>
-                      <li>
-                        Reformulated the simplex LP subproblem from the
-                        n-dimensional state space into an m-dimensional
-                        active-constraint subspace, where m ≤ n.
-                      </li>
-                      <li>
-                        Developed a Newton-step recovery routine for infeasible
-                        initial points.
-                      </li>
-                      <li>
-                        Designed a shrinking trust-region strategy for equality
-                        constraints.
-                      </li>
-                      <li>
-                        Evaluated non-convex benchmark problems spanning 2D–13D,
-                        including runtime and KKT convergence characteristics
-                        relative to classical Zoutendijk and evolutionary
-                        baselines.
-                      </li>
-                    </ul>
-                    <h4>Evaluation &amp; scope</h4>
-                    <p>
-                      The résumé reports 2–3.1× CPU runtime improvements on the
-                      evaluated benchmarks. This is a research-reported result,
-                      not a universal performance guarantee. The publication
-                      URL, complete benchmark tables, and citation metadata have
-                      not been independently verified and are not invented here.
-                    </p>
+    <h5>Demonstration videos</h5><div class="resource-videos"><figure class="resource-video"><figcaption id="video-dobot-0">Dobot screen recording 1</figcaption><video controls playsinline preload="none" aria-labelledby="video-dobot-0" data-project-video><source src="/assets/Dobot_gzwp/Screen%20Recording%202026-10-10%20at%2010.51.24%E2%80%AFPM.mov" >Your browser does not support this video. Use the video links below.</video><div class="video-links"><a class="resource-link" href="/assets/Dobot_gzwp/Screen%20Recording%202026-10-10%20at%2010.51.24%E2%80%AFPM.mov" target="_blank" rel="noopener noreferrer">Watch Video <span class="sr-only">Dobot screen recording 1</span> ↗</a><a class="resource-download" href="/assets/Dobot_gzwp/Screen%20Recording%202026-10-10%20at%2010.51.24%E2%80%AFPM.mov" download>Download Video <span class="sr-only">Dobot screen recording 1</span></a></div><p class="video-error" hidden>This browser could not play this file. Use Watch Video or Download Video to open the original recording.</p></figure><figure class="resource-video"><figcaption id="video-dobot-1">Dobot screen recording 2</figcaption><video controls playsinline preload="none" aria-labelledby="video-dobot-1" data-project-video><source src="/assets/Dobot_gzwp/Screen%20Recording%202026-10-10%20at%207.11.45%E2%80%AFAM.mov" >Your browser does not support this video. Use the video links below.</video><div class="video-links"><a class="resource-link" href="/assets/Dobot_gzwp/Screen%20Recording%202026-10-10%20at%207.11.45%E2%80%AFAM.mov" target="_blank" rel="noopener noreferrer">Watch Video <span class="sr-only">Dobot screen recording 2</span> ↗</a><a class="resource-download" href="/assets/Dobot_gzwp/Screen%20Recording%202026-10-10%20at%207.11.45%E2%80%AFAM.mov" download>Download Video <span class="sr-only">Dobot screen recording 2</span></a></div><p class="video-error" hidden>This browser could not play this file. Use Watch Video or Download Video to open the original recording.</p></figure></div>
 
-                    <div class="media-placeholder">
-                      <strong>ORIGINAL PROJECT MEDIA / TO BE ADDED</strong
-                      >Verified publication or preprint, algorithm pseudocode,
-                      benchmark tables, and original convergence / runtime
-                      plots.
-                    </div>
-                  </div>
-                </details>
-              </div>
-            </article>
-            <!-- PROJECTS:end -->
+    <details class="resource-file-group"><summary>Robot source, configuration and models <span>(60 files)</span></summary><ul class="resource-files"><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>CMakeLists.txt</strong><span class="file-meta">CMakeLists.txt · TXT</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_description/CMakeLists.txt" download aria-label="Download CMakeLists.txt">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>display.launch.py</strong><span class="file-meta">display.launch.py · PY</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_description/launch/display.launch.py" download aria-label="Download display.launch.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Link1.STL</strong><span class="file-meta">Link1.STL · STL</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_description/meshes/Link1.STL" download aria-label="Download Link1.STL">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Link2.STL</strong><span class="file-meta">Link2.STL · STL</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_description/meshes/Link2.STL" download aria-label="Download Link2.STL">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Link3.STL</strong><span class="file-meta">Link3.STL · STL</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_description/meshes/Link3.STL" download aria-label="Download Link3.STL">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Link4.STL</strong><span class="file-meta">Link4.STL · STL</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_description/meshes/Link4.STL" download aria-label="Download Link4.STL">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Link5.STL</strong><span class="file-meta">Link5.STL · STL</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_description/meshes/Link5.STL" download aria-label="Download Link5.STL">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Link6.STL</strong><span class="file-meta">Link6.STL · STL</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_description/meshes/Link6.STL" download aria-label="Download Link6.STL">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>base_link.STL</strong><span class="file-meta">base_link.STL · STL</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_description/meshes/base_link.STL" download aria-label="Download base_link.STL">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>package.xml</strong><span class="file-meta">package.xml · XML</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_description/package.xml" download aria-label="Download package.xml">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>dobot.rviz</strong><span class="file-meta">dobot.rviz · RVIZ</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_description/rviz/dobot.rviz" download aria-label="Download dobot.rviz">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>nova5.urdf</strong><span class="file-meta">nova5.urdf · URDF</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_description/urdf/nova5.urdf" download aria-label="Download nova5.urdf">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>CMakeLists.txt</strong><span class="file-meta">CMakeLists.txt · TXT</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/CMakeLists.txt" download aria-label="Download CMakeLists.txt">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>cartesian_path.hpp</strong><span class="file-meta">cartesian_path.hpp · HPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/cartesian_path.hpp" download aria-label="Download cartesian_path.hpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>executive_engine.hpp</strong><span class="file-meta">executive_engine.hpp · HPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/executive_engine.hpp" download aria-label="Download executive_engine.hpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>experiment_runner.hpp</strong><span class="file-meta">experiment_runner.hpp · HPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/experiment_runner.hpp" download aria-label="Download experiment_runner.hpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>experiment_task.hpp</strong><span class="file-meta">experiment_task.hpp · HPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/experiment_task.hpp" download aria-label="Download experiment_task.hpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>gripper_controller.hpp</strong><span class="file-meta">gripper_controller.hpp · HPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/gripper_controller.hpp" download aria-label="Download gripper_controller.hpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>pick_and_place_context.hpp</strong><span class="file-meta">pick_and_place_context.hpp · HPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/pick_and_place_context.hpp" download aria-label="Download pick_and_place_context.hpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>task_state.hpp</strong><span class="file-meta">task_state.hpp · HPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/task_state.hpp" download aria-label="Download task_state.hpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>task_state_machine.hpp</strong><span class="file-meta">task_state_machine.hpp · HPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/task_state_machine.hpp" download aria-label="Download task_state_machine.hpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>telemetry_observer.hpp</strong><span class="file-meta">telemetry_observer.hpp · HPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/include/dobot_executive/telemetry_observer.hpp" download aria-label="Download telemetry_observer.hpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>executive.launch.py</strong><span class="file-meta">executive.launch.py · PY</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/launch/executive.launch.py" download aria-label="Download executive.launch.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>experiment.launch.py</strong><span class="file-meta">experiment.launch.py · PY</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/launch/experiment.launch.py" download aria-label="Download experiment.launch.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>pick_and_place.launch.py</strong><span class="file-meta">pick_and_place.launch.py · PY</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/launch/pick_and_place.launch.py" download aria-label="Download pick_and_place.launch.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>package.xml</strong><span class="file-meta">package.xml · XML</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/package.xml" download aria-label="Download package.xml">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>dobot_executive_node.cpp</strong><span class="file-meta">dobot_executive_node.cpp · CPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/src/dobot_executive_node.cpp" download aria-label="Download dobot_executive_node.cpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>dobot_experiment_node.cpp</strong><span class="file-meta">dobot_experiment_node.cpp · CPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/src/dobot_experiment_node.cpp" download aria-label="Download dobot_experiment_node.cpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>dobot_pick_and_place_node.cpp</strong><span class="file-meta">dobot_pick_and_place_node.cpp · CPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/src/dobot_pick_and_place_node.cpp" download aria-label="Download dobot_pick_and_place_node.cpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>executive_engine.cpp</strong><span class="file-meta">executive_engine.cpp · CPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/src/executive_engine.cpp" download aria-label="Download executive_engine.cpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>task_state.cpp</strong><span class="file-meta">task_state.cpp · CPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/src/task_state.cpp" download aria-label="Download task_state.cpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>task_state_machine.cpp</strong><span class="file-meta">task_state_machine.cpp · CPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_executive/src/task_state_machine.cpp" download aria-label="Download task_state_machine.cpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>CMakeLists.txt</strong><span class="file-meta">CMakeLists.txt · TXT</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_gazebo/CMakeLists.txt" download aria-label="Download CMakeLists.txt">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>dobot_controllers.yaml</strong><span class="file-meta">dobot_controllers.yaml · YAML</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_gazebo/config/dobot_controllers.yaml" download aria-label="Download dobot_controllers.yaml">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>gazebo.launch.py</strong><span class="file-meta">gazebo.launch.py · PY</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_gazebo/launch/gazebo.launch.py" download aria-label="Download gazebo.launch.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>sim.launch.py</strong><span class="file-meta">sim.launch.py · PY</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_gazebo/launch/sim.launch.py" download aria-label="Download sim.launch.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>package.xml</strong><span class="file-meta">package.xml · XML</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_gazebo/package.xml" download aria-label="Download package.xml">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>dobot_sim_node.cpp</strong><span class="file-meta">dobot_sim_node.cpp · CPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_gazebo/src/dobot_sim_node.cpp" download aria-label="Download dobot_sim_node.cpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>CMakeLists.txt</strong><span class="file-meta">CMakeLists.txt · TXT</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_kinematics/CMakeLists.txt" download aria-label="Download CMakeLists.txt">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>kinematics_engine.hpp</strong><span class="file-meta">kinematics_engine.hpp · HPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_kinematics/include/dobot_kinematics/kinematics_engine.hpp" download aria-label="Download kinematics_engine.hpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>package.xml</strong><span class="file-meta">package.xml · XML</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_kinematics/package.xml" download aria-label="Download package.xml">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>kinematics_engine.cpp</strong><span class="file-meta">kinematics_engine.cpp · CPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_kinematics/src/kinematics_engine.cpp" download aria-label="Download kinematics_engine.cpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>test_kinematics_node.cpp</strong><span class="file-meta">test_kinematics_node.cpp · CPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_kinematics/src/test_kinematics_node.cpp" download aria-label="Download test_kinematics_node.cpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>CMakeLists.txt</strong><span class="file-meta">CMakeLists.txt · TXT</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_motion_planning/CMakeLists.txt" download aria-label="Download CMakeLists.txt">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>motion_planning_engine.hpp</strong><span class="file-meta">motion_planning_engine.hpp · HPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_motion_planning/include/dobot_motion_planning/motion_planning_engine.hpp" download aria-label="Download motion_planning_engine.hpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>package.xml</strong><span class="file-meta">package.xml · XML</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_motion_planning/package.xml" download aria-label="Download package.xml">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>motion_planning_engine.cpp</strong><span class="file-meta">motion_planning_engine.cpp · CPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_motion_planning/src/motion_planning_engine.cpp" download aria-label="Download motion_planning_engine.cpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>test_planning_node.cpp</strong><span class="file-meta">test_planning_node.cpp · CPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_motion_planning/src/test_planning_node.cpp" download aria-label="Download test_planning_node.cpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>__init__.py</strong><span class="file-meta">__init__.py · PY</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_pybullet/dobot_pybullet/__init__.py" download aria-label="Download __init__.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>dobot_pybullet_node.py</strong><span class="file-meta">dobot_pybullet_node.py · PY</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_pybullet/dobot_pybullet/dobot_pybullet_node.py" download aria-label="Download dobot_pybullet_node.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>dobot_pybullet.launch.py</strong><span class="file-meta">dobot_pybullet.launch.py · PY</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_pybullet/launch/dobot_pybullet.launch.py" download aria-label="Download dobot_pybullet.launch.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>package.xml</strong><span class="file-meta">package.xml · XML</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_pybullet/package.xml" download aria-label="Download package.xml">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>dobot_pybullet</strong><span class="file-meta">dobot_pybullet · TEXT</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_pybullet/resource/dobot_pybullet" download aria-label="Download dobot_pybullet">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>setup.cfg</strong><span class="file-meta">setup.cfg · CFG</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_pybullet/setup.cfg" download aria-label="Download setup.cfg">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>setup.py</strong><span class="file-meta">setup.py · PY</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_pybullet/setup.py" download aria-label="Download setup.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>CMakeLists.txt</strong><span class="file-meta">CMakeLists.txt · TXT</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_trajectory/CMakeLists.txt" download aria-label="Download CMakeLists.txt">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>trajectory_planning_engine.hpp</strong><span class="file-meta">trajectory_planning_engine.hpp · HPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_trajectory/include/dobot_trajectory/trajectory_planning_engine.hpp" download aria-label="Download trajectory_planning_engine.hpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>package.xml</strong><span class="file-meta">package.xml · XML</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_trajectory/package.xml" download aria-label="Download package.xml">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>test_trajectory_node.cpp</strong><span class="file-meta">test_trajectory_node.cpp · CPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_trajectory/src/test_trajectory_node.cpp" download aria-label="Download test_trajectory_node.cpp">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>trajectory_planning_engine.cpp</strong><span class="file-meta">trajectory_planning_engine.cpp · CPP</span></div><a class="resource-download" href="/assets/Dobot_gzwp/src/dobot_trajectory/src/trajectory_planning_engine.cpp" download aria-label="Download trajectory_planning_engine.cpp">Download</a></li></ul></details>
+
+  </section>
+              <p class="case-organization">Personal project</p>
+              <h4>Engineering problem</h4><p>Plan and execute collision-aware motion for a six-axis manipulator, while handling inverse-kinematics sensitivity near singular configurations and generating controlled motion between targets.</p>
+              <h4>Architecture &amp; approach</h4><ol class="pipeline" aria-label="Engineering pipeline"><li>Robot description</li><li>Kinematics / IK</li><li>Path planning</li><li>Time profiling</li><li>Simulation</li></ol><p>The robot description provides the link and joint structure for kinematic modeling. The inverse-kinematics solver maps end-effector targets into joint configurations. Collision-aware planning connects configurations, followed by interpolation and velocity profiling to produce the motion reference evaluated in simulation.</p>
+              <h4>Technical contributions</h4><ul class="contribution-list"><li>Developed a full ROS 2 Humble motion-planning stack in C++ for a six-axis manipulator.</li><li>Implemented numerical inverse kinematics using Damped Least Squares, a geometric Jacobian, and a singularity-robust pseudoinverse.</li><li>Developed cubic-spline trajectory interpolation with trapezoidal and quintic-polynomial velocity profiles.</li><li>Integrated RRT/RRT* and MoveIt 2 for collision-aware planning within a pick-and-place pipeline.</li><li>Validated robotic motion in both Gazebo and PyBullet.</li></ul>
+              <h4>Evaluation &amp; scope</h4><p>Evaluation was performed in Gazebo and PyBullet simulations. No real-robot deployment, success-rate metric, or timing guarantee is claimed. Trapezoidal and quintic profiles are described separately without assuming all generated motion is jerk-free.</p>
+
+            </div></details>
+          </div>
+        </article>
+        <article class="project-card" id="project-stewart" data-category="robotics controls" aria-labelledby="title-stewart">
+          <figure class="project-figure"><img src="/assets/diagrams/stewart.svg" width="640" height="360" loading="lazy" decoding="async" alt="Conceptual Stewart platform with six connecting struts and motion axes"><span class="project-number" aria-hidden="true">PROJECT / 02</span><figcaption>CONCEPTUAL SCHEMATIC</figcaption></figure>
+          <div class="project-body">
+            <div class="project-meta"><span>Parallel robotics / Stabilization</span><time datetime="2023-03">March 2023 – August 2023</time></div>
+            <h3 id="title-stewart">6-DOF Stewart Platform</h3>
+            <p class="project-subtitle">Ship-Mounted Drone Landing</p>
+            <p class="project-description">A parallel robotic landing platform designed to compensate for vessel motion, combining mechanical design, kinematic modeling, and simulation.</p>
+            <ul class="tags" aria-label="Technologies"><li>CAD</li><li>URDF</li><li>ROS</li><li>PyBullet</li><li>Kinematics</li></ul>
+            <p class="project-outcome">Six degrees of freedom. One stabilization problem.</p>
+            <details class="project-details"><summary aria-controls="case-stewart"><span class="expand-label">Expand Project</span><span class="collapse-label">Collapse Project</span><span class="sr-only">: 6-DOF Stewart Platform</span></summary><div class="case-study" id="case-stewart">
+              <section class="project-resources" aria-labelledby="resources-stewart"><h4 id="resources-stewart">Project resources<span class="sr-only">: 6-DOF Stewart Platform</span></h4>
+    <div class="resource-links"><a class="resource-link" href="https://github.com/mlayek21/Stewart-Platform" target="_blank" rel="noopener noreferrer">View on GitHub <span aria-hidden="true">↗</span></a></div>
+    <h5>Documents &amp; downloads</h5><ul class="resource-files"><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Stewart platform documentation</strong><span class="file-meta">StewartPlatformDocument.pdf · PDF</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Files/StewartPlatformDocument.pdf" download aria-label="Download StewartPlatformDocument.pdf">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Stewart robot model archive</strong><span class="file-meta">Stewart.zip · ZIP</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart.zip" download aria-label="Download Stewart.zip">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Fusion 360 CAD assembly</strong><span class="file-meta">Stewart_CAD.f3d · F3D</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart_CAD.f3d" download aria-label="Download Stewart_CAD.f3d">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Kinematics analysis notebook</strong><span class="file-meta">analysis.ipynb · IPYNB</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Files/analysis.ipynb" download aria-label="Download analysis.ipynb">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Stewart project guide</strong><span class="file-meta">README.md · MD</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/README.md" download aria-label="Download README.md">Download</a></li></ul>
+
+    <h5>Demonstration videos</h5><div class="resource-videos"><figure class="resource-video"><figcaption id="video-stewart-0">Full platform simulation</figcaption><video controls playsinline preload="none" aria-labelledby="video-stewart-0" data-project-video><source src="/assets/Stewart-Platform-main/Simulation/Full_simulation.mp4" type="video/mp4">Your browser does not support this video. Use the video links below.</video><div class="video-links"><a class="resource-link" href="/assets/Stewart-Platform-main/Simulation/Full_simulation.mp4" target="_blank" rel="noopener noreferrer">Watch Video <span class="sr-only">Full platform simulation</span> ↗</a><a class="resource-download" href="/assets/Stewart-Platform-main/Simulation/Full_simulation.mp4" download>Download Video <span class="sr-only">Full platform simulation</span></a></div><p class="video-error" hidden>This browser could not play this file. Use Watch Video or Download Video to open the original recording.</p></figure><figure class="resource-video"><figcaption id="video-stewart-1">Simulation 1 — RPR motion</figcaption><video controls playsinline preload="none" aria-labelledby="video-stewart-1" data-project-video><source src="/assets/Stewart-Platform-main/Simulation/simulation1.mp4" type="video/mp4">Your browser does not support this video. Use the video links below.</video><div class="video-links"><a class="resource-link" href="/assets/Stewart-Platform-main/Simulation/simulation1.mp4" target="_blank" rel="noopener noreferrer">Watch Video <span class="sr-only">Simulation 1 — RPR motion</span> ↗</a><a class="resource-download" href="/assets/Stewart-Platform-main/Simulation/simulation1.mp4" download>Download Video <span class="sr-only">Simulation 1 — RPR motion</span></a></div><p class="video-error" hidden>This browser could not play this file. Use Watch Video or Download Video to open the original recording.</p></figure><figure class="resource-video"><figcaption id="video-stewart-2">Simulation 2 — return-to-home sequence</figcaption><video controls playsinline preload="none" aria-labelledby="video-stewart-2" data-project-video><source src="/assets/Stewart-Platform-main/Simulation/simulation2.mp4" type="video/mp4">Your browser does not support this video. Use the video links below.</video><div class="video-links"><a class="resource-link" href="/assets/Stewart-Platform-main/Simulation/simulation2.mp4" target="_blank" rel="noopener noreferrer">Watch Video <span class="sr-only">Simulation 2 — return-to-home sequence</span> ↗</a><a class="resource-download" href="/assets/Stewart-Platform-main/Simulation/simulation2.mp4" download>Download Video <span class="sr-only">Simulation 2 — return-to-home sequence</span></a></div><p class="video-error" hidden>This browser could not play this file. Use Watch Video or Download Video to open the original recording.</p></figure><figure class="resource-video"><figcaption id="video-stewart-3">Simulation 3 — spiral trajectory</figcaption><video controls playsinline preload="none" aria-labelledby="video-stewart-3" data-project-video><source src="/assets/Stewart-Platform-main/Simulation/simulation3.mp4" type="video/mp4">Your browser does not support this video. Use the video links below.</video><div class="video-links"><a class="resource-link" href="/assets/Stewart-Platform-main/Simulation/simulation3.mp4" target="_blank" rel="noopener noreferrer">Watch Video <span class="sr-only">Simulation 3 — spiral trajectory</span> ↗</a><a class="resource-download" href="/assets/Stewart-Platform-main/Simulation/simulation3.mp4" download>Download Video <span class="sr-only">Simulation 3 — spiral trajectory</span></a></div><p class="video-error" hidden>This browser could not play this file. Use Watch Video or Download Video to open the original recording.</p></figure><figure class="resource-video"><figcaption>Stewart platform — full demonstration</figcaption><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/Fk0oGJxcMWg" title="Stewart platform — full demonstration" allow="encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a class="resource-link" href="https://www.youtube.com/watch?v=Fk0oGJxcMWg" target="_blank" rel="noopener noreferrer">Watch Video on YouTube <span aria-hidden="true">↗</span></a></figure></div>
+    <h5>Project images &amp; plots</h5><div class="resource-gallery"><figure><a href="/assets/Stewart-Platform-main/Files/Stewart1%20v2.png" target="_blank" rel="noopener noreferrer"><img src="/assets/Stewart-Platform-main/Files/Stewart1%20v2.png" alt="Stewart platform CAD assembly" loading="lazy" decoding="async"></a><figcaption>Stewart1 v2.png <a href="/assets/Stewart-Platform-main/Files/Stewart1%20v2.png" download aria-label="Download Stewart1 v2.png">Download</a></figcaption></figure><figure><a href="/assets/Stewart-Platform-main/Files/URDF_LINK.png" target="_blank" rel="noopener noreferrer"><img src="/assets/Stewart-Platform-main/Files/URDF_LINK.png" alt="Stewart platform URDF link arrangement" loading="lazy" decoding="async"></a><figcaption>URDF_LINK.png <a href="/assets/Stewart-Platform-main/Files/URDF_LINK.png" download aria-label="Download URDF_LINK.png">Download</a></figcaption></figure><figure><a href="/assets/Stewart-Platform-main/Files/output1.png" target="_blank" rel="noopener noreferrer"><img src="/assets/Stewart-Platform-main/Files/output1.png" alt="Stewart platform kinematics plot output1" loading="lazy" decoding="async"></a><figcaption>output1.png <a href="/assets/Stewart-Platform-main/Files/output1.png" download aria-label="Download output1.png">Download</a></figcaption></figure><figure><a href="/assets/Stewart-Platform-main/Files/output2.png" target="_blank" rel="noopener noreferrer"><img src="/assets/Stewart-Platform-main/Files/output2.png" alt="Stewart platform kinematics plot output2" loading="lazy" decoding="async"></a><figcaption>output2.png <a href="/assets/Stewart-Platform-main/Files/output2.png" download aria-label="Download output2.png">Download</a></figcaption></figure><figure><a href="/assets/Stewart-Platform-main/Files/output3.png" target="_blank" rel="noopener noreferrer"><img src="/assets/Stewart-Platform-main/Files/output3.png" alt="Stewart platform kinematics plot output3" loading="lazy" decoding="async"></a><figcaption>output3.png <a href="/assets/Stewart-Platform-main/Files/output3.png" download aria-label="Download output3.png">Download</a></figcaption></figure><figure><a href="/assets/Stewart-Platform-main/Files/output4.png" target="_blank" rel="noopener noreferrer"><img src="/assets/Stewart-Platform-main/Files/output4.png" alt="Stewart platform kinematics plot output4" loading="lazy" decoding="async"></a><figcaption>output4.png <a href="/assets/Stewart-Platform-main/Files/output4.png" download aria-label="Download output4.png">Download</a></figcaption></figure><figure><a href="/assets/Stewart-Platform-main/Files/output_1.png" target="_blank" rel="noopener noreferrer"><img src="/assets/Stewart-Platform-main/Files/output_1.png" alt="Stewart platform kinematics plot output_1" loading="lazy" decoding="async"></a><figcaption>output_1.png <a href="/assets/Stewart-Platform-main/Files/output_1.png" download aria-label="Download output_1.png">Download</a></figcaption></figure><figure><a href="/assets/Stewart-Platform-main/Files/output_2.png" target="_blank" rel="noopener noreferrer"><img src="/assets/Stewart-Platform-main/Files/output_2.png" alt="Stewart platform kinematics plot output_2" loading="lazy" decoding="async"></a><figcaption>output_2.png <a href="/assets/Stewart-Platform-main/Files/output_2.png" download aria-label="Download output_2.png">Download</a></figcaption></figure><figure><a href="/assets/Stewart-Platform-main/Files/output_3.png" target="_blank" rel="noopener noreferrer"><img src="/assets/Stewart-Platform-main/Files/output_3.png" alt="Stewart platform kinematics plot output_3" loading="lazy" decoding="async"></a><figcaption>output_3.png <a href="/assets/Stewart-Platform-main/Files/output_3.png" download aria-label="Download output_3.png">Download</a></figcaption></figure></div>
+    <details class="resource-file-group"><summary>Simulation source and supporting files <span>(9 files)</span></summary><ul class="resource-files"><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>StewartPlatform.py</strong><span class="file-meta">StewartPlatform.py · PY</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/StewartPlatform.py" download aria-label="Download StewartPlatform.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>__init__.py</strong><span class="file-meta">__init__.py · PY</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/__init__.py" download aria-label="Download __init__.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>draw_3d_spiral.py</strong><span class="file-meta">draw_3d_spiral.py · PY</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/draw_3d_spiral.py" download aria-label="Download draw_3d_spiral.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>generate_elliptical_points.py</strong><span class="file-meta">generate_elliptical_points.py · PY</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/generate_elliptical_points.py" download aria-label="Download generate_elliptical_points.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>inv_kinematics.py</strong><span class="file-meta">inv_kinematics.py · PY</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/inv_kinematics.py" download aria-label="Download inv_kinematics.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>main.py</strong><span class="file-meta">main.py · PY</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/main.py" download aria-label="Download main.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>requirements.txt</strong><span class="file-meta">requirements.txt · TXT</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/requirements.txt" download aria-label="Download requirements.txt">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>LICENSE</strong><span class="file-meta">LICENSE · TEXT</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/LICENSE" download aria-label="Download LICENSE">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Link_graph.txt</strong><span class="file-meta">Link_graph.txt · TXT</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Link_graph.txt" download aria-label="Download Link_graph.txt">Download</a></li></ul></details><details class="resource-file-group"><summary>URDF and mesh files <span>(53 files)</span></summary><ul class="resource-files"><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Stewart.urdf</strong><span class="file-meta">Stewart.urdf · URDF</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/Stewart.urdf" download aria-label="Download Stewart.urdf">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>hello_bullet.py</strong><span class="file-meta">hello_bullet.py · PY</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/hello_bullet.py" download aria-label="Download hello_bullet.py">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>J1B_1.stl</strong><span class="file-meta">J1B_1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/J1B_1.stl" download aria-label="Download J1B_1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>J1T1.stl</strong><span class="file-meta">J1T1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/J1T1.stl" download aria-label="Download J1T1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>J2B1.stl</strong><span class="file-meta">J2B1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/J2B1.stl" download aria-label="Download J2B1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>J2T1.stl</strong><span class="file-meta">J2T1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/J2T1.stl" download aria-label="Download J2T1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>J3B1.stl</strong><span class="file-meta">J3B1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/J3B1.stl" download aria-label="Download J3B1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>J3T_1.stl</strong><span class="file-meta">J3T_1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/J3T_1.stl" download aria-label="Download J3T_1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>J4B1.stl</strong><span class="file-meta">J4B1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/J4B1.stl" download aria-label="Download J4B1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>J4T1.stl</strong><span class="file-meta">J4T1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/J4T1.stl" download aria-label="Download J4T1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>J5B1.stl</strong><span class="file-meta">J5B1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/J5B1.stl" download aria-label="Download J5B1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>J5T_1.stl</strong><span class="file-meta">J5T_1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/J5T_1.stl" download aria-label="Download J5T_1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>J6B1.stl</strong><span class="file-meta">J6B1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/J6B1.stl" download aria-label="Download J6B1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>J6T1.stl</strong><span class="file-meta">J6T1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/J6T1.stl" download aria-label="Download J6T1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>TOP1.stl</strong><span class="file-meta">TOP1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/TOP1.stl" download aria-label="Download TOP1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>UJ11.stl</strong><span class="file-meta">UJ11.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/UJ11.stl" download aria-label="Download UJ11.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>UJ21.stl</strong><span class="file-meta">UJ21.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/UJ21.stl" download aria-label="Download UJ21.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>UJ31.stl</strong><span class="file-meta">UJ31.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/UJ31.stl" download aria-label="Download UJ31.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>UJ41.stl</strong><span class="file-meta">UJ41.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/UJ41.stl" download aria-label="Download UJ41.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>UJ51.stl</strong><span class="file-meta">UJ51.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/UJ51.stl" download aria-label="Download UJ51.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>UJ61.stl</strong><span class="file-meta">UJ61.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/UJ61.stl" download aria-label="Download UJ61.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>X1bottom1.stl</strong><span class="file-meta">X1bottom1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/X1bottom1.stl" download aria-label="Download X1bottom1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>X1top1.stl</strong><span class="file-meta">X1top1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/X1top1.stl" download aria-label="Download X1top1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>X2bottom1.stl</strong><span class="file-meta">X2bottom1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/X2bottom1.stl" download aria-label="Download X2bottom1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>X2top1.stl</strong><span class="file-meta">X2top1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/X2top1.stl" download aria-label="Download X2top1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>X3bottom1.stl</strong><span class="file-meta">X3bottom1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/X3bottom1.stl" download aria-label="Download X3bottom1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>X3top1.stl</strong><span class="file-meta">X3top1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/X3top1.stl" download aria-label="Download X3top1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>X4bottom1.stl</strong><span class="file-meta">X4bottom1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/X4bottom1.stl" download aria-label="Download X4bottom1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>X4top1.stl</strong><span class="file-meta">X4top1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/X4top1.stl" download aria-label="Download X4top1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>X5bottom1.stl</strong><span class="file-meta">X5bottom1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/X5bottom1.stl" download aria-label="Download X5bottom1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>X5top1.stl</strong><span class="file-meta">X5top1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/X5top1.stl" download aria-label="Download X5top1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>X6bottom1.stl</strong><span class="file-meta">X6bottom1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/X6bottom1.stl" download aria-label="Download X6bottom1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>X6top1.stl</strong><span class="file-meta">X6top1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/X6top1.stl" download aria-label="Download X6top1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>base_link.stl</strong><span class="file-meta">base_link.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/base_link.stl" download aria-label="Download base_link.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>cylinder11.stl</strong><span class="file-meta">cylinder11.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/cylinder11.stl" download aria-label="Download cylinder11.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>cylinder21.stl</strong><span class="file-meta">cylinder21.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/cylinder21.stl" download aria-label="Download cylinder21.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>cylinder31.stl</strong><span class="file-meta">cylinder31.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/cylinder31.stl" download aria-label="Download cylinder31.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>cylinder41.stl</strong><span class="file-meta">cylinder41.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/cylinder41.stl" download aria-label="Download cylinder41.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>cylinder51.stl</strong><span class="file-meta">cylinder51.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/cylinder51.stl" download aria-label="Download cylinder51.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>cylinder61.stl</strong><span class="file-meta">cylinder61.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/cylinder61.stl" download aria-label="Download cylinder61.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>indicator1.stl</strong><span class="file-meta">indicator1.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/indicator1.stl" download aria-label="Download indicator1.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>piston11.stl</strong><span class="file-meta">piston11.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/piston11.stl" download aria-label="Download piston11.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>piston21.stl</strong><span class="file-meta">piston21.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/piston21.stl" download aria-label="Download piston21.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>piston31.stl</strong><span class="file-meta">piston31.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/piston31.stl" download aria-label="Download piston31.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>piston41.stl</strong><span class="file-meta">piston41.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/piston41.stl" download aria-label="Download piston41.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>piston51.stl</strong><span class="file-meta">piston51.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/piston51.stl" download aria-label="Download piston51.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>piston61.stl</strong><span class="file-meta">piston61.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/piston61.stl" download aria-label="Download piston61.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>rod11.stl</strong><span class="file-meta">rod11.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/rod11.stl" download aria-label="Download rod11.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>rod21.stl</strong><span class="file-meta">rod21.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/rod21.stl" download aria-label="Download rod21.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>rod31.stl</strong><span class="file-meta">rod31.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/rod31.stl" download aria-label="Download rod31.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>rod41.stl</strong><span class="file-meta">rod41.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/rod41.stl" download aria-label="Download rod41.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>rod51.stl</strong><span class="file-meta">rod51.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/rod51.stl" download aria-label="Download rod51.stl">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>rod61.stl</strong><span class="file-meta">rod61.stl · STL</span></div><a class="resource-download" href="/assets/Stewart-Platform-main/Stewart/meshes/rod61.stl" download aria-label="Download rod61.stl">Download</a></li></ul></details>
+
+  </section>
+              <p class="case-organization">AeThrone Aerospace · Pune, India</p>
+              <h4>Engineering problem</h4><p>A ship-mounted drone landing surface must account for changing vessel orientation. The engineering problem was to model a six-DOF parallel platform capable of compensating for pitch, roll, and yaw disturbances.</p>
+              <h4>Architecture &amp; approach</h4><ol class="pipeline" aria-label="Engineering pipeline"><li>Mechanical CAD</li><li>URDF model</li><li>FK / IK</li><li>Dynamics</li><li>ROS / PyBullet</li></ol><p>The parallel mechanism links a fixed base to a moving platform through six struts. Kinematic modeling relates the desired platform pose to the strut configurations, while CAD and URDF descriptions carry the mechanism into simulation. Dynamic analysis complements the pose model when examining stabilization behavior.</p>
+              <h4>Technical contributions</h4><ul class="contribution-list"><li>Designed the mechanical architecture of a six-degree-of-freedom Stewart platform.</li><li>Created detailed CAD geometry and a URDF description for robotic modeling and simulation.</li><li>Developed forward and inverse kinematic models linking platform pose and leg configuration.</li><li>Performed dynamic analysis and integrated robotic software using ROS and PyBullet.</li><li>Evaluated platform motion and stabilization behavior against pitch, roll, and yaw disturbances in simulation.</li></ul>
+              <h4>Evaluation &amp; scope</h4><p>The résumé documents simulation-based evaluation in ROS / PyBullet. The verified public repository contains CAD, URDF, inverse-kinematics code, and PyBullet simulation. Commercial deployment, drone landing trials, and shipboard testing are not claimed.</p>
+
+            </div></details>
+          </div>
+        </article>
+        <article class="project-card" id="project-actuator" data-category="controls" aria-labelledby="title-actuator">
+          <figure class="project-figure"><img src="/assets/diagrams/actuator.svg" width="640" height="360" loading="lazy" decoding="async" alt="Conceptual magnetic actuator, slider-crank mechanism, and closed-loop feedback path"><span class="project-number" aria-hidden="true">PROJECT / 03</span><figcaption>CONCEPTUAL SCHEMATIC</figcaption></figure>
+          <div class="project-body">
+            <div class="project-meta"><span>Mechatronics / Hardware prototype</span><time datetime="2019-07">July 2019</time></div>
+            <h3 id="title-actuator">Magnetic Reciprocating Actuator</h3>
+            <p class="project-subtitle">Mechatronic Design &amp; Closed-Loop Control</p>
+            <p class="project-description">A designed, fabricated, and tested electromagnetic actuator with Arduino control, position feedback, and a slider-crank mechanism for rotary output.</p>
+            <ul class="tags" aria-label="Technologies"><li>CAD</li><li>Arduino</li><li>Embedded control</li><li>Sensors</li><li>Dynamics</li></ul>
+            <p class="project-outcome">Physical fabrication, electronics, and closed-loop testing</p>
+            <details class="project-details"><summary aria-controls="case-actuator"><span class="expand-label">Expand Project</span><span class="collapse-label">Collapse Project</span><span class="sr-only">: Magnetic Reciprocating Actuator</span></summary><div class="case-study" id="case-actuator">
+              <section class="project-resources" aria-labelledby="resources-actuator"><h4 id="resources-actuator">Project resources<span class="sr-only">: Magnetic Reciprocating Actuator</span></h4>
+    <div class="resource-links"><a class="resource-link" href="https://drive.google.com/drive/folders/0B8mi-UIPyFnQMjFPVi15czdRMWM?resourcekey=0-Eh_bgKei0EmU-U8omZkVig&amp;usp=drive_link" target="_blank" rel="noopener noreferrer">View on Google Drive <span aria-hidden="true">↗</span></a><a class="resource-link" href="https://drive.google.com/drive/folders/1kT-SygJnn5RaKKRg4QQ6IUS3Fce4iKiz" target="_blank" rel="noopener noreferrer">CAD files on Google Drive <span aria-hidden="true">↗</span></a><a class="resource-link" href="https://drive.google.com/drive/folders/1dZmqpIdaxMV-rEEg8Qq4StCnh4kudOGu" target="_blank" rel="noopener noreferrer">Inventor files on Google Drive <span aria-hidden="true">↗</span></a></div>
+
+    <h5>Files on Google Drive</h5><ul class="resource-files"><li><span class="file-icon" aria-hidden="true">↓</span><div><strong><a href="https://drive.google.com/file/d/1e74z5h8MeFiHWFpzUNbdPHKdJbfrGYc4/view" target="_blank" rel="noopener noreferrer">ELECTROMAGNETIC RECIPROCATING ENGINE..docx</a></strong><span class="file-meta">ELECTROMAGNETIC RECIPROCATING ENGINE..docx · DOCX · Google Drive</span></div><a class="resource-download" href="https://drive.google.com/uc?export=download&amp;id=1e74z5h8MeFiHWFpzUNbdPHKdJbfrGYc4" target="_blank" rel="noopener noreferrer" aria-label="Download ELECTROMAGNETIC RECIPROCATING ENGINE..docx">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong><a href="https://drive.google.com/file/d/0B8mi-UIPyFnQc05iVE1jdmxvNEpldEpHYVdkMzI2Q0R5MUE4/view?resourcekey=0-gJns5dw983z9BJ3DYryt3Q" target="_blank" rel="noopener noreferrer">final design-Temp0000.png</a></strong><span class="file-meta">final design-Temp0000.png · PNG · Google Drive</span></div><a class="resource-download" href="https://drive.google.com/uc?export=download&amp;id=0B8mi-UIPyFnQc05iVE1jdmxvNEpldEpHYVdkMzI2Q0R5MUE4&amp;resourcekey=0-gJns5dw983z9BJ3DYryt3Q" target="_blank" rel="noopener noreferrer" aria-label="Download final design-Temp0000.png">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong><a href="https://drive.google.com/file/d/1Y2aZBY-Z1bdswPz9EPP8CG8qSxyKepZ-/view" target="_blank" rel="noopener noreferrer">IMG_20180515_125110.jpg</a></strong><span class="file-meta">IMG_20180515_125110.jpg · JPG · Google Drive</span></div><a class="resource-download" href="https://drive.google.com/uc?export=download&amp;id=1Y2aZBY-Z1bdswPz9EPP8CG8qSxyKepZ-" target="_blank" rel="noopener noreferrer" aria-label="Download IMG_20180515_125110.jpg">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong><a href="https://drive.google.com/file/d/0B8mi-UIPyFnQZXUyWVh3VjBUTGpKSWJFR2ZqUVZBN0hINVRJ/view?resourcekey=0-gyZkXa-qHztnOSae6ZL0Lg" target="_blank" rel="noopener noreferrer">KALYANI GOVT MRE.pptx</a></strong><span class="file-meta">KALYANI GOVT MRE.pptx · PPTX · Google Drive</span></div><a class="resource-download" href="https://drive.google.com/uc?export=download&amp;id=0B8mi-UIPyFnQZXUyWVh3VjBUTGpKSWJFR2ZqUVZBN0hINVRJ&amp;resourcekey=0-gyZkXa-qHztnOSae6ZL0Lg" target="_blank" rel="noopener noreferrer" aria-label="Download KALYANI GOVT MRE.pptx">Download</a></li><li><span class="file-icon" aria-hidden="true">↓</span><div><strong><a href="https://drive.google.com/file/d/1gOA0FxcN5KIUWTmwTuFLLnsI1wxh43FN/view" target="_blank" rel="noopener noreferrer">tachometer-using-arduino.ino</a></strong><span class="file-meta">tachometer-using-arduino.ino · INO · Google Drive</span></div><a class="resource-download" href="https://drive.google.com/uc?export=download&amp;id=1gOA0FxcN5KIUWTmwTuFLLnsI1wxh43FN" target="_blank" rel="noopener noreferrer" aria-label="Download tachometer-using-arduino.ino">Download</a></li></ul>
+    <h5>Demonstration videos</h5><div class="resource-videos"><figure class="resource-video"><figcaption>MRE prototype — EMR in action</figcaption><iframe loading="lazy" src="https://drive.google.com/file/d/0B8mi-UIPyFnQVzdNNGFrZzFnVFk/preview?resourcekey=0-yg_qJXtH0NKjRQZzcSTLfg" title="MRE prototype — EMR in action" allow="fullscreen; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><a class="resource-link" href="https://drive.google.com/file/d/0B8mi-UIPyFnQVzdNNGFrZzFnVFk/view?resourcekey=0-yg_qJXtH0NKjRQZzcSTLfg" target="_blank" rel="noopener noreferrer">Watch Video on Google Drive <span aria-hidden="true">↗</span></a><p>Original AVI recording · 1.17 GB. Google Drive handles playback and download confirmation.</p></figure></div>
+
+
+
+  </section>
+              <p class="case-organization">Kalyani Government Engineering College</p>
+              <h4>Engineering problem</h4><p>Convert electromagnetically driven reciprocating motion into continuous rotary output, and coordinate actuation with mechanism position using a closed-loop microcontroller system.</p>
+              <h4>Architecture &amp; approach</h4><ol class="pipeline" aria-label="Engineering pipeline"><li>Analytical model</li><li>CAD design</li><li>Fabrication</li><li>Arduino control</li><li>Prototype testing</li></ol><p>A photoelectric sensor measures mechanism position. Arduino control logic uses this feedback to coordinate solid-state switching of electromagnetic actuation. The slider-crank mechanism couples the resulting linear reciprocation to rotary output, connecting the mechanical dynamics model with the electronic control loop.</p>
+              <h4>Technical contributions</h4><ul class="contribution-list"><li>Modeled a constrained slider-crank mechanism and analyzed conversion of linear reciprocation into continuous rotary motion.</li><li>Performed analytical dynamic torque profiling and compared mechanical behavior with theoretical models.</li><li>Designed the complete CAD architecture and fabricated a working physical hardware prototype.</li><li>Developed Arduino-based embedded control logic with photoelectric position feedback.</li><li>Integrated solid-state switching for phase-locked electromagnetic actuation.</li><li>Tested empirical motion stability and torque output against analytical models.</li></ul>
+              <h4>Evaluation &amp; scope</h4><p>This was a real hardware project: CAD design, fabrication, electronics integration, microcontroller programming, and experimental testing. The résumé reports comparison of empirical motion stability and torque output against theory; numerical test results are not supplied.</p>
+
+            </div></details>
+          </div>
+        </article>
+        <article class="project-card" id="project-optimization" data-category="research" aria-labelledby="title-optimization">
+          <figure class="project-figure"><img src="/assets/diagrams/optimization.svg" width="640" height="360" loading="lazy" decoding="async" alt="Conceptual objective contours, a constraint boundary, and feasible search directions; not benchmark data"><span class="project-number" aria-hidden="true">PROJECT / 04</span><figcaption>CONCEPTUAL SCHEMATIC</figcaption></figure>
+          <div class="project-body">
+            <div class="project-meta"><span>Optimization research / Algorithms</span><time datetime="2024-06">June 2024</time></div>
+            <h3 id="title-optimization">Kanpur–Zoutendijk Solver</h3>
+            <p class="project-subtitle">Constrained Nonlinear Optimization</p>
+            <p class="project-description">Co-authored feasible-direction optimization research that reduces the LP subproblem to an active-constraint subspace and recovers infeasible starting points.</p>
+            <ul class="tags" aria-label="Technologies"><li>Nonlinear programming</li><li>Newton methods</li><li>KKT</li><li>Numerical optimization</li></ul>
+            <p class="project-outcome">Research-reported 2–3.1× runtime improvement on benchmarks</p>
+            <details class="project-details"><summary aria-controls="case-optimization"><span class="expand-label">Expand Project</span><span class="collapse-label">Collapse Project</span><span class="sr-only">: Kanpur–Zoutendijk Solver</span></summary><div class="case-study" id="case-optimization">
+              <section class="project-resources" aria-labelledby="resources-optimization"><h4 id="resources-optimization">Project resources<span class="sr-only">: Kanpur–Zoutendijk Solver</span></h4>
+
+    <h5>Documents &amp; downloads</h5><ul class="resource-files"><li><span class="file-icon" aria-hidden="true">↓</span><div><strong>Kanpur–Zoutendijk research document</strong><span class="file-meta">Kanpur_zoutendijk.pdf · PDF</span></div><a class="resource-download" href="/assets/kzountendijk/Kanpur_zoutendijk.pdf" download aria-label="Download Kanpur_zoutendijk.pdf">Download</a></li></ul>
+
+
+
+
+
+  </section>
+              <p class="case-organization">Indian Institute of Technology Kanpur</p>
+              <h4>Engineering problem</h4><p>Solve constrained nonlinear optimization problems while reducing the cost of the feasible-direction subproblem and accommodating infeasible initial points and equality constraints.</p>
+              <h4>Architecture &amp; approach</h4><ol class="pipeline" aria-label="Engineering pipeline"><li>Active constraints</li><li>Reduced LP</li><li>Feasible direction</li><li>Trust region</li><li>KKT evaluation</li></ol><p>The method focuses the feasible-direction LP on the active-constraint subspace rather than the full state space. Newton steps address infeasible starts, while a shrinking trust region handles equality constraints. Benchmark methodology examines computational performance and KKT residual behavior across the tested non-convex problems.</p>
+              <h4>Technical contributions</h4><ul class="contribution-list"><li>Co-authored a feasible-direction numerical solver for constrained nonlinear problems.</li><li>Reformulated the simplex LP subproblem from the n-dimensional state space into an m-dimensional active-constraint subspace, where m ≤ n.</li><li>Developed a Newton-step recovery routine for infeasible initial points.</li><li>Designed a shrinking trust-region strategy for equality constraints.</li><li>Evaluated non-convex benchmark problems spanning 2D–13D, including runtime and KKT convergence characteristics relative to classical Zoutendijk and evolutionary baselines.</li></ul>
+              <h4>Evaluation &amp; scope</h4><p>The résumé reports 2–3.1× CPU runtime improvements on the evaluated benchmarks. This is a research-reported result, not a universal performance guarantee. The supplied research PDF is available below; a publisher URL or DOI has not been supplied.</p>
+
+            </div></details>
+          </div>
+        </article>
+<!-- PROJECTS:end -->
           </div>
           <p class="media-note">
-            <span aria-hidden="true">ⓘ</span> Project visuals are conceptual
-            schematics. Each case study identifies the original media still to
-            be added.
+            <span aria-hidden="true">ⓘ</span> Card illustrations are conceptual schematics. Expand each project for its original files, videos, and project links.
           </p>
         </div>
       </section>

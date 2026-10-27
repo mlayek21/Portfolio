@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="nova5_robot">
+
+  <!-- ==================== Premium Industrial Palette ==================== -->
+  <!-- Anodized Metallic Gold/Yellow for the Main Casting Arms -->
+  <material name="metallic_yellow">
+    <color rgba="0.88 0.72 0.20 1.0"/>
+  </material>
+
+  <!-- Deep Obsidian / Carbon Black for the Base and Articulation Housings -->
+  <material name="metallic_obsidian_black">
+    <color rgba="0.13 0.14 0.16 1.0"/>
+  </material>
+
+  <!-- Machined Satin Gunmetal for Joint Pivots -->
+  <material name="machined_gunmetal">
+    <color rgba="0.28 0.30 0.33 1.0"/>
+  </material>
+
+  <!-- High-Gloss Anodized Tin Red for the End-Effector Flange -->
+  <material name="anodized_tin_red">
+    <color rgba="0.92 0.12 0.15 1.0"/>
+  </material>
+
+  <!-- ==================== World and Base Frames ==================== -->
+  <link name="world"/>
+
+  <joint name="world_to_base" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="dummy_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
+    </inertial>
+  </link>
+
+  <joint name="dummy_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="dummy_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <link name="base_link">
+    <inertial>
+      <origin xyz="6.56698714338847E-06 2.73052159273858E-06 0.0698223124889706" rpy="0 0 0"/>
+      <mass value="1.3106443915978"/>
+      <inertia
+        ixx="0.00308109148952278" ixy="-4.0369958400766E-08" ixz="5.2607663395944E-07"
+        iyy="0.00309758743296662" iyz="-6.37484696538659E-09" izz="0.00232835367593981"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dobot_description/meshes/base_link.STL"/>
+      </geometry>
+      <material name="metallic_obsidian_black">
+        <color rgba="0.18 0.19 0.22 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dobot_description/meshes/base_link.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- ==================== Link 1 (Shoulder Pivot / Turret) ==================== -->
+  <link name="Link1">
+    <inertial>
+      <origin xyz="9.18642704220017E-06 -0.021770784235076 -0.0261833991373472" rpy="0 0 0"/>
+      <mass value="1.08090940330212"/>
+      <inertia
+        ixx="0.00265963193119309" ixy="1.85196348994647E-07" ixz="-3.27720040926316E-07"
+        iyy="0.00247342331575097" iyz="0.000661331129337329" izz="0.00164737186015792"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dobot_description/meshes/Link1.STL"/>
+      </geometry>
+      <material name="machined_gunmetal">
+        <color rgba="0.32 0.35 0.38 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dobot_description/meshes/Link1.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint1" type="revolute">
+    <origin xyz="0 0 0.240000000000178" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="Link1"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-6.28" upper="6.28" effort="100" velocity="2.36"/>
+  </joint>
+
+  <!-- ==================== Link 2 (Upper Arm Casting: Industrial Yellow) ==================== -->
+  <link name="Link2">
+    <inertial>
+      <origin xyz="-0.19933810729628 -0.00696463483971123 0.109208661556353" rpy="0 0 0"/>
+      <mass value="2.54585370113969"/>
+      <inertia
+        ixx="0.00285193319464959" ixy="-0.00212784400881843" ixz="-0.00109906472415148"
+        iyy="0.0636767872390402" iyz="-3.83872488712299E-05" izz="0.0643005121111712"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dobot_description/meshes/Link2.STL"/>
+      </geometry>
+      <material name="metallic_yellow">
+        <color rgba="0.90 0.72 0.15 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dobot_description/meshes/Link2.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint2" type="revolute">
+    <origin xyz="0 0 0" rpy="-1.57080287682252 1.53586622836832 3.14159265358979"/>
+    <parent link="Link1"/>
+    <child link="Link2"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-3.14" upper="3.14" effort="100" velocity="2.36"/>
+  </joint>
+
+  <!-- ==================== Link 3 (Forearm Casting: Industrial Yellow) ==================== -->
+  <link name="Link3">
+    <inertial>
+      <origin xyz="-0.152357289724291 -0.0053571688729055 0.0198991511385547" rpy="0 0 0"/>
+      <mass value="1.40745649848125"/>
+      <inertia
+        ixx="0.00100801309674517" ixy="-0.00077546601599374" ixz="4.43267247578911E-05"
+        iyy="0.0231741793950995" iyz="1.31338010910521E-06" izz="0.02359962285525"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dobot_description/meshes/Link3.STL"/>
+      </geometry>
+      <material name="metallic_yellow">
+        <color rgba="0.90 0.72 0.15 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dobot_description/meshes/Link3.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint3" type="revolute">
+    <origin xyz="-0.399756009268664 -0.0139690033141953 0" rpy="0 0 0"/>
+    <parent link="Link2"/>
+    <child link="Link3"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-2.79" upper="2.79" effort="100" velocity="2.36"/>
+  </joint>
+
+  <!-- ==================== Link 4 (Wrist 1 Joint Collar) ==================== -->
+  <link name="Link4">
+    <inertial>
+      <origin xyz="-6.37112093033953E-06 -0.0227590499933018 -0.0202381689250349" rpy="0 0 0"/>
+      <mass value="0.439666284541787"/>
+      <inertia
+        ixx="0.000634738696193051" ixy="1.33529119545257E-08" ixz="2.91412587537874E-08"
+        iyy="0.00045014395177395" iyz="0.000210919680187578" izz="0.000480311391216564"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dobot_description/meshes/Link4.STL"/>
+      </geometry>
+      <material name="machined_gunmetal">
+        <color rgba="0.32 0.35 0.38 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dobot_description/meshes/Link4.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint4" type="revolute">
+    <origin xyz="-0.329798707647103 -0.0115244277211674 0.134999532858734" rpy="0 0 -1.53586622840712"/>
+    <parent link="Link3"/>
+    <child link="Link4"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-6.28" upper="6.28" effort="100" velocity="2.36"/>
+  </joint>
+
+  <!-- ==================== Link 5 (Wrist 2 Casting: Industrial Yellow) ==================== -->
+  <link name="Link5">
+    <inertial>
+      <origin xyz="-1.27925890990664E-06 0.00190911597991161 -0.0076111865696753" rpy="0 0 0"/>
+      <mass value="0.574835130260071"/>
+      <inertia
+        ixx="0.000663176880523558" ixy="1.30179448329138E-08" ixz="1.22670358756949E-08"
+        iyy="0.000397520749670404" iyz="-0.00012026389265228" izz="0.000641156648195347"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dobot_description/meshes/Link5.STL"/>
+      </geometry>
+      <material name="metallic_yellow">
+        <color rgba="0.90 0.72 0.15 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dobot_description/meshes/Link5.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint5" type="revolute">
+    <origin xyz="0 -0.12 0" rpy="1.5708 0 0"/>
+    <parent link="Link4"/>
+    <child link="Link5"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-6.28" upper="6.28" effort="100" velocity="2.36"/>
+  </joint>
+
+  <!-- ==================== Link 6 (End-Effector Flange: Tin Red) ==================== -->
+  <link name="Link6">
+    <inertial>
+      <origin xyz="1.5476173180832E-06 0.000151598525687691 -0.0194592287865595" rpy="0 0 0"/>
+      <mass value="0.129679940383395"/>
+      <inertia
+        ixx="5.02803124561327E-05" ixy="6.27222112028976E-11" ixz="3.5128727780266E-12"
+        iyy="5.05400746124736E-05" iyz="5.0343678900728E-08" izz="7.7863015024978E-05"/>
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dobot_description/meshes/Link6.STL"/>
+      </geometry>
+      <material name="anodized_tin_red">
+        <color rgba="0.92 0.12 0.15 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://dobot_description/meshes/Link6.STL"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint6" type="revolute">
+    <origin xyz="0 0.088328 0" rpy="-1.5708 0 0"/>
+    <parent link="Link5"/>
+    <child link="Link6"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-6.28" upper="6.28" effort="100" velocity="2.36"/>
+  </joint>
+
+  <!-- ==================== Gripper Assembly ==================== -->
+  <!-- Gripper Base Mounting Plate and Actuator Body -->
+  <link name="gripper_base_link">
+    <inertial>
+      <origin xyz="0 0 0.035" rpy="0 0 0"/>
+      <mass value="0.35"/>
+      <inertia ixx="0.00035" ixy="0.0" ixz="0.0" iyy="0.00035" iyz="0.0" izz="0.00025"/>
+    </inertial>
+    <!-- Circular Mounting Flange -->
+    <visual>
+      <origin xyz="0 0 0.006" rpy="0 0 0"/>
+      <geometry>
+        <cylinder radius="0.038" length="0.012"/>
+      </geometry>
+      <material name="machined_gunmetal">
+        <color rgba="0.32 0.35 0.38 1.0"/>
+      </material>
+    </visual>
+    <!-- Rectangular Gripper Housing -->
+    <visual>
+      <origin xyz="0 0 0.040" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.082 0.052 0.056"/>
+      </geometry>
+      <material name="machined_gunmetal">
+        <color rgba="0.32 0.35 0.38 1.0"/>
+      </material>
+    </visual>
+    <!-- Industrial Accent Trim -->
+    <visual>
+      <origin xyz="0 0 0.065" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.084 0.054 0.006"/>
+      </geometry>
+      <material name="anodized_tin_red">
+        <color rgba="0.92 0.12 0.15 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.038" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.085 0.055 0.076"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="flange_to_gripper" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="Link6"/>
+    <child link="gripper_base_link"/>
+  </joint>
+
+  <!-- Left Gripper Finger -->
+  <link name="left_finger_link">
+    <inertial>
+      <origin xyz="0 0 0.022" rpy="0 0 0"/>
+      <mass value="0.04"/>
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.000005"/>
+    </inertial>
+    <!-- Metallic Finger Arm -->
+    <visual>
+      <origin xyz="0 0 0.022" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.012 0.018 0.044"/>
+      </geometry>
+      <material name="machined_gunmetal">
+        <color rgba="0.32 0.35 0.38 1.0"/>
+      </material>
+    </visual>
+    <!-- High-Friction Grip Pad -->
+    <visual>
+      <origin xyz="0.004 0 0.032" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.004 0.016 0.022"/>
+      </geometry>
+      <material name="pad_black">
+        <color rgba="0.10 0.10 0.10 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.022" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.014 0.018 0.044"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="left_finger_joint" type="prismatic">
+    <origin xyz="-0.015 0 0.068" rpy="0 0 0"/>
+    <parent link="gripper_base_link"/>
+    <child link="left_finger_link"/>
+    <axis xyz="-1 0 0"/>
+    <limit lower="0.0" upper="0.025" effort="40" velocity="0.10"/>
+  </joint>
+
+  <!-- Right Gripper Finger (Mimics Left Finger for Symmetrical Motion) -->
+  <link name="right_finger_link">
+    <inertial>
+      <origin xyz="0 0 0.022" rpy="0 0 0"/>
+      <mass value="0.04"/>
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.000005"/>
+    </inertial>
+    <!-- Metallic Finger Arm -->
+    <visual>
+      <origin xyz="0 0 0.022" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.012 0.018 0.044"/>
+      </geometry>
+      <material name="machined_gunmetal">
+        <color rgba="0.32 0.35 0.38 1.0"/>
+      </material>
+    </visual>
+    <!-- High-Friction Grip Pad -->
+    <visual>
+      <origin xyz="-0.004 0 0.032" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.004 0.016 0.022"/>
+      </geometry>
+      <material name="pad_black">
+        <color rgba="0.10 0.10 0.10 1.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.022" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.014 0.018 0.044"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="right_finger_joint" type="prismatic">
+    <origin xyz="0.015 0 0.068" rpy="0 0 0"/>
+    <parent link="gripper_base_link"/>
+    <child link="right_finger_link"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="0.0" upper="0.025" effort="40" velocity="0.10"/>
+    <mimic joint="left_finger_joint" multiplier="1.0" offset="0.0"/>
+  </joint>
+
+  <!-- Tool Center Point (TCP / Grasp Frame) -->
+  <link name="tcp_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.001"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
+    </inertial>
+  </link>
+  <joint name="gripper_to_tcp" type="fixed">
+    <origin xyz="0 0 0.112" rpy="0 0 0"/>
+    <parent link="gripper_base_link"/>
+    <child link="tcp_link"/>
+  </joint>
+
+  <!-- ==================== Gazebo Simulation Colors ==================== -->
+  <gazebo reference="base_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+  <gazebo reference="Link1">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="Link2">
+    <material>Gazebo/Gold</material>
+  </gazebo>
+  <gazebo reference="Link3">
+    <material>Gazebo/Gold</material>
+  </gazebo>
+  <gazebo reference="Link4">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="Link5">
+    <material>Gazebo/Gold</material>
+  </gazebo>
+  <gazebo reference="Link6">
+    <material>Gazebo/Red</material>
+  </gazebo>
+  <gazebo reference="gripper_base_link">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+  <gazebo reference="left_finger_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  <gazebo reference="right_finger_link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <!-- ==================== ROS 2 Control Hardware Interface ==================== -->
+  <ros2_control name="DobotNova5System" type="system">
+    <hardware>
+      <plugin>ign_ros2_control/IgnitionSystem</plugin>
+    </hardware>
+
+    <joint name="joint1">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint2">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint3">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint4">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint5">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="joint6">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="left_finger_joint">
+      <command_interface name="position"/>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+  <!-- ==================== Gazebo Sim ros2_control Plugin ==================== -->
+  <gazebo>
+    <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
+      <parameters>$(find dobot_gazebo)/config/dobot_controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+</robot>

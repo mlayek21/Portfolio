@@ -99,15 +99,29 @@ Professional facts and dates come from the latest supplied `MonojitLayekResume.p
 
 The **2–3.1× runtime improvement** is a résumé-reported result for the research benchmarks, not a general performance guarantee. Schematics are illustrative and are not simulation screenshots, fabricated experimental results, or photographs of completed hardware.
 
-The Stewart platform's [public source repository](https://github.com/mlayek21/Stewart-Platform) was verified. No verified source repository for the six-axis Dobot project or MRE prototype, and no verified publication URL for the Kanpur–Zoutendijk work, was supplied. Their links are intentionally omitted. The distinct three-DOF planning repository must not be presented as the six-axis Dobot source.
+## Project resources
 
-Useful follow-up assets:
+Each card has a native keyboard-accessible **Expand Project / Collapse Project** control. The same `content/projects.json` records supply the static HTML, build validation, downloads, project links, and media. Resources appear before the engineering case study, and additional source/model files are grouped in their own disclosures.
 
-- Actual RViz/Gazebo/PyBullet captures and trajectory plots for the six-axis manipulator.
-- Stewart platform CAD screenshots and simulation media.
-- MRE prototype photographs, CAD assembly captures, and measured results.
-- The optimization paper's DOI or publisher URL and benchmark methodology/data.
-- Verified project repository and credential links, where available.
+| Project | Connected resources |
+| --- | --- |
+| Dobot | Two original H.264 MOV recordings, setup guide, and the supplied robot source/configuration/mesh files. |
+| Stewart platform | Public GitHub repository, PDF documentation, ZIP model, Fusion CAD, notebook, four local MP4 simulations, the existing YouTube demo, nine images/plots, and supporting source/URDF/mesh files. |
+| Magnetic Reciprocating Actuator (MRE) | Owner-supplied Google Drive folder, its CAD and Inventor subfolders, DOCX report, PPTX presentation, two photographs, Arduino sketch, and Drive-hosted AVI demonstration. |
+| Kanpur–Zoutendijk | Existing `assets/kzountendijk/Kanpur_zoutendijk.pdf` research document. |
+
+MRE uses its own exact [Google Drive folder](https://drive.google.com/drive/folders/0B8mi-UIPyFnQMjFPVi15czdRMWM?resourcekey=0-Eh_bgKei0EmU-U8omZkVig&usp=drive_link). File IDs and per-file resource keys were read from that public folder. Five smaller files returned successful download responses with `Content-Disposition: attachment`; their Download controls use those verified URLs. The 1.17 GB AVI requires Google's download-confirmation flow, so it has a Drive preview and Watch Video link, without being presented as a direct download. Folder sharing links remain folder links.
+
+Local recordings use the original files, with no duplicate conversions. MOV sources omit the HTML source `type` hint to let browsers detect their H.264 contents; the server still sends the correct QuickTime MIME type. Original local videos have HTML5 controls, Watch Video and Download Video links, no autoplay, and `preload="none"`. Embedded YouTube/Drive players load on expansion and unload on collapse or filtering. Third-party playback still depends on the hosting service and browser. Local video serving supports byte ranges for seeking. Production CSP permits only the two required video iframe hosts.
+
+The build publishes only files explicitly referenced by project data, plus the existing website assets. Nested `.git` repositories, ROS build/install/log directories, environments, caches, and unrelated vendored files are excluded. The supplied nested Dobot checkout remains intact locally; its selected assets are ordinary files in the portfolio Git tree, not a submodule. Asset paths with spaces and Unicode are URL-encoded and checked before publication.
+
+Still unconfigured because no public resource was supplied:
+
+- **Dobot public GitHub button:** the discovered `mlayek21/ros2-dobot-manipulator` repository is private and returns HTTP 404 to visitors. Its public button is intentionally omitted. Repository visibility has not been changed.
+- **MRE and optimization GitHub repositories:** no project-specific public URLs supplied.
+- **Optimization publisher/DOI, source code, benchmark data, and video:** no verified URLs or additional files supplied. The existing PDF is connected.
+- **Google Drive resources for Dobot, Stewart, or optimization:** none supplied or found; no Drive buttons are invented.
 
 Dates, education, certificates, contacts, and research results should be reviewed by the portfolio owner when updating the résumé.
 

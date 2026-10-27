@@ -44,6 +44,30 @@ window.matchMedia("(min-width: 1081px)").addEventListener("change", (event) => {
 const filters = document.querySelector(".project-filters");
 const projects = [...document.querySelectorAll(".project-card")];
 const count = document.querySelector(".project-count");
+function updateProjectMedia(project) {
+  const visible =
+    !project.hidden && project.querySelector(".project-details").open;
+  if (!visible)
+    project.querySelectorAll("video").forEach((video) => video.pause());
+  for (const frame of project.querySelectorAll("iframe")) {
+    frame.dataset.mediaUrl ||= frame.getAttribute("src");
+    if (visible && !frame.hasAttribute("src"))
+      frame.src = frame.dataset.mediaUrl;
+    else if (!visible) frame.removeAttribute("src");
+  }
+}
+for (const project of projects) {
+  const details = project.querySelector(".project-details");
+  updateProjectMedia(project);
+  details.addEventListener("toggle", () => updateProjectMedia(project));
+  for (const video of project.querySelectorAll("[data-project-video]")) {
+    const showError = () => {
+      video.parentElement.querySelector(".video-error").hidden = false;
+    };
+    video.addEventListener("error", showError);
+    video.querySelector("source").addEventListener("error", showError);
+  }
+}
 filters.hidden = false;
 function filterProjects(category) {
   let visible = 0;
@@ -52,6 +76,7 @@ function filterProjects(category) {
       category === "all" ||
       project.dataset.category.split(" ").includes(category);
     project.hidden = !show;
+    updateProjectMedia(project);
     if (show) visible += 1;
   }
   for (const filter of filters.querySelectorAll("button")) {

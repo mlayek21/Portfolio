@@ -674,7 +674,7 @@ em {
   margin-top: 22px;
   border-top: 1px solid #2a394a;
 }
-.project-details summary {
+.project-details > summary {
   cursor: pointer;
   min-height: 57px;
   display: flex;
@@ -686,18 +686,203 @@ em {
   font-weight: 500;
   list-style: none;
 }
-.project-details summary::-webkit-details-marker {
+.project-details > summary::-webkit-details-marker {
   display: none;
 }
-.project-details summary::after {
+.project-details > summary::after {
   content: "+";
   font-family: var(--mono);
   font-size: 19px;
   color: #8db4bf;
   font-weight: 400;
 }
-.project-details[open] summary::after {
+.project-details[open] > summary::after {
   content: "−";
+}
+.project-details > summary .collapse-label {
+  display: none;
+}
+.project-details[open] > summary .expand-label {
+  display: none;
+}
+.project-details[open] > summary .collapse-label {
+  display: inline;
+}
+.project-details[open] > .case-study {
+  animation: project-reveal 180ms ease-out;
+}
+@keyframes project-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-details[open] > .case-study {
+    animation: none;
+  }
+}
+.resource-links,
+.video-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.resource-links {
+  margin: 15px 0 22px;
+}
+.resource-link,
+.resource-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 8px 11px;
+  border: 1px solid #42646d;
+  border-radius: 4px;
+  color: #b9ece5;
+  font-size: 11px;
+  line-height: 1.5;
+  text-decoration: none;
+}
+.resource-link:hover,
+.resource-download:hover {
+  border-color: var(--cyan);
+  background: #17303b;
+}
+.project-resources h5 {
+  font-size: 11px;
+  color: #dbe7f3;
+  margin: 22px 0 12px;
+}
+.resource-files {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+.resource-files li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid #283747;
+}
+.resource-files li > div {
+  min-width: 0;
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+.resource-files strong {
+  display: block;
+  color: #dbe7f3;
+  font-size: 11px;
+  font-weight: 500;
+}
+.resource-files strong a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+.file-icon {
+  color: #9ad6cf;
+  font-size: 20px;
+}
+.file-meta {
+  display: block;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: #a4b6ca;
+  margin-top: 4px;
+}
+.resource-download {
+  flex-shrink: 0;
+}
+.resource-video {
+  margin: 0 0 22px;
+}
+.resource-video figcaption {
+  color: #c7d8e6;
+  margin-bottom: 8px;
+  font-size: 11px;
+}
+.resource-video video,
+.resource-video iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #080e16;
+  border: 1px solid #2a394a;
+  border-radius: 4px;
+}
+.resource-video video {
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+}
+.video-links {
+  margin-top: 10px;
+}
+.resource-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.resource-gallery figure {
+  margin: 0;
+  min-width: 0;
+}
+.resource-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 4px;
+}
+.resource-gallery figcaption {
+  overflow-wrap: anywhere;
+  font-size: 10px;
+  margin: 7px 0 12px;
+}
+.resource-gallery figcaption a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #b9ece5;
+  padding: 0 5px;
+}
+.resource-file-group {
+  border-top: 1px solid #2a394a;
+  margin-top: 14px;
+}
+.resource-file-group > summary {
+  font-size: 11px;
+  line-height: 1.7;
+  padding: 10px 0;
+}
+.resource-file-group > summary span {
+  font-size: 9px;
+  white-space: nowrap;
+}
+.resource-missing,
+.video-error {
+  color: #c3d0df;
+}
+@media (max-width: 420px) {
+  .resource-files li {
+    flex-wrap: wrap;
+  }
+  .resource-files li > div {
+    flex-basis: calc(100% - 35px);
+  }
+  .resource-files li > .resource-download {
+    margin-left: 24px;
+  }
+  .resource-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 .case-study {
   padding: 4px 0 25px;
